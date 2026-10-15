@@ -3,261 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#7b1744">
+<meta name="theme-color" content="#831b48">
+<meta name="description" content="Chamunda Marriage Beuro - લગ્ન રજિસ્ટ્રેશન અને યોગ્ય જીવનસાથી શોધવામાં સહાય.">
 <title>Chamunda Marriage Beuro</title>
-
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#fff7fa;
-  color:#30232b;
-  line-height:1.6
-}
-header{
-  background:linear-gradient(135deg,#74163f,#bd4777);
-  color:white;
-  text-align:center;
-  padding:30px 16px
-}
-header h1{font-size:29px;margin:0 0 8px}
-header p{margin:5px 0}
-.language{margin-top:18px}
-select{
-  padding:11px 14px;
-  border-radius:9px;
-  border:1px solid #ddd;
-  font-size:16px;
-  background:white
-}
+body{margin:0;font-family:Arial,sans-serif;background:#fff6f9;color:#30252b;line-height:1.7}
+header{background:linear-gradient(135deg,#74163f,#b74777);color:white;text-align:center;padding:30px 15px}
+h1{font-size:clamp(26px,6vw,36px);margin:0 0 8px}
+header p{font-size:18px}
+select{padding:12px;border:0;border-radius:9px;font-size:16px;margin-top:8px}
 main{padding:12px}
-.card{
-  background:white;
-  max-width:560px;
-  margin:18px auto;
-  padding:22px 18px;
-  border-radius:16px;
-  box-shadow:0 4px 18px #6b23421a;
-  text-align:center
-}
-h2{color:#841b4c;font-size:23px;margin:0 0 12px}
-p{margin:10px 0}
-.hero{
-  background:#fff0f6;
-  border:1px solid #f4d5e3
-}
-.big{font-size:22px;font-weight:bold;color:#8a174a}
-.button{
-  display:inline-block;
-  margin:8px 4px;
-  padding:12px 18px;
-  border-radius:9px;
-  text-decoration:none;
-  background:#087f46;
-  color:white;
-  font-weight:bold
-}
-.button.pink{background:#8a174a}
-.button.gold{background:#9b6b12}
-img.qr{width:220px;max-width:100%;height:auto}
-.features{text-align:left;max-width:440px;margin:auto}
-.features p{padding:5px 0}
-input,textarea{
-  width:100%;
-  padding:12px;
-  margin:7px 0;
-  border:1px solid #d8cbd2;
-  border-radius:8px;
-  font-size:16px
-}
-footer{
-  background:#381725;
-  color:white;
-  padding:22px 12px;
-  text-align:center;
-  margin-top:24px
-}
-.small{font-size:14px;color:#6b5962}
-footer a{color:white}
+.card{background:white;max-width:650px;margin:18px auto;padding:23px 18px;border-radius:17px;box-shadow:0 5px 20px #5b16301a;text-align:center;overflow-wrap:anywhere}
+h2{color:#831b48;margin:0 0 12px;font-size:24px}
+p,li{font-size:17px}
+.fee{font-size:28px;font-weight:bold;color:#831b48}
+.btn{display:inline-block;background:#087f46;color:white;text-decoration:none;padding:13px 19px;border-radius:9px;margin:8px 4px;font-weight:bold}
+.pink{background:#831b48}
+.blue{background:#1769aa}
+.qr{width:220px;max-width:100%;height:auto}
+.left{text-align:left}
+.small{font-size:14px;color:#685b62}
+footer{background:#351523;color:white;text-align:center;padding:22px 12px;margin-top:25px}
 </style>
 </head>
-
 <body>
 <header>
-  <h1>💍 Chamunda Marriage Beuro</h1>
-  <p id="tagline">તમારી પસંદગી મુજબ યોગ્ય જીવનસાથી શોધવામાં સહાય.</p>
-  <div class="language">
-    <label for="language" id="languageLabel">ભાષા પસંદ કરો:</label><br>
-    <select id="language" onchange="changeLanguage(this.value)">
-      <option value="gu">ગુજરાતી</option>
-      <option value="hi">हिंदी</option>
-      <option value="en">English</option>
-    </select>
-  </div>
+<h1 id="title">💍 Chamunda Marriage Beuro</h1>
+<p id="tagline">તમારી પસંદગી મુજબ યોગ્ય જીવનસાથી શોધવામાં સહાય.</p>
+<label id="languageLabel" for="language">ભાષા પસંદ કરો</label><br>
+<select id="language" onchange="changeLanguage(this.value)">
+<option value="gu">ગુજરાતી</option>
+<option value="hi">हिन्दी</option>
+<option value="en">English</option>
+</select>
 </header>
 
 <main>
-  <section class="card hero">
-    <h2 id="welcome">લગ્ન માટે યોગ્ય જીવનસાથી શોધો</h2>
-    <p id="intro">તમારી પસંદગી અને જરૂરિયાત મુજબ લગ્ન માટે યોગ્ય સંબંધ શોધવામાં અમે મદદ કરીએ છીએ.</p>
-    <div class="features">
-      <p id="feature1">💍 લગ્ન માટે યોગ્ય બાયોડેટાની માહિતી</p>
-      <p id="feature2">🤝 તમારી પસંદગી મુજબ સંબંધ શોધવામાં સહાય</p>
-      <p id="feature3">📋 રજિસ્ટ્રેશન પછી પ્રોફાઇલની માહિતી</p>
-    </div>
-  </section>
+<section class="card">
+<h2 id="welcome">🙏 આપનું સ્વાગત છે</h2>
+<p id="intro">લગ્ન માટે યોગ્ય જીવનસાથી શોધવામાં અમે તમારી પસંદગી મુજબ મદદ કરીએ છીએ.</p>
+<p id="feature1">💍 યોગ્ય બાયોડેટાની માહિતી</p>
+<p id="feature2">🤝 તમારી પસંદગી મુજબ સંબંધ શોધવામાં સહાય</p>
+<p id="feature3">📋 રજિસ્ટ્રેશન પછી ઉપલબ્ધ પ્રોફાઇલની માહિતી</p>
+</section>
 
-  <section class="card">
-    <h2 id="registrationTitle">લગ્ન રજિસ્ટ્રેશન</h2>
-    <p id="registrationText">રજિસ્ટ્રેશનની માન્યતા: 1 વર્ષ</p>
-    <p class="big" id="fee">રજિસ્ટ્રેશન ફી: ₹999</p>
-    <a class="button pink" id="formButton"
-       href="https://forms.gle/7gsYUcPXXaidVuYV7"
-       target="_blank" rel="noopener">રજિસ્ટ્રેશન ફોર્મ ભરો</a>
-  </section>
+<section class="card">
+<h2 id="regTitle">💍 લગ્ન રજિસ્ટ્રેશન</h2>
+<p id="validity">સભ્યતાની માન્યતા: 1 વર્ષ</p>
+<p class="fee" id="fee">રજિસ્ટ્રેશન ફી: ₹999</p>
+<p id="formInfo">રજિસ્ટ્રેશન માટે નીચેનું ફોર્મ ભરો.</p>
+<a class="btn pink" id="formBtn" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" rel="noopener">રજિસ્ટ્રેશન ફોર્મ ભરો</a>
+</section>
 
-  <section class="card">
-    <h2 id="searchTitle">🔎 જીવનસાથી શોધવા માટે સંપર્ક કરો</h2>
-    <p id="searchText">તમારી પસંદગી, ઉંમર અને શહેર વિશે માહિતી આપવા માટે WhatsApp પર સંપર્ક કરો.</p>
-    <a class="button" id="searchButton"
-       href="https://wa.me/919173111399"
-       target="_blank" rel="noopener">WhatsApp પર સંપર્ક કરો</a>
-    <p class="small" id="searchNote">પ્રોફાઇલની માહિતી રજિસ્ટ્રેશન અને ઉપલબ્ધતાના આધારે આપવામાં આવશે.</p>
-  </section>
+<section class="card">
+<h2 id="serviceTitle">💐 અમારી સેવા અને સભ્યતા</h2>
+<div class="left">
+<p id="service1">• એક વર્ષની સભ્યતા દરમિયાન 7–8 યોગ્ય પ્રોફાઇલ પસંદ કરીને આગળ વાતચીત કરવાની સુવિધા.</p>
+<p id="service2">• પ્રોફાઇલની ઉપલબ્ધતા અને બંને પક્ષની સંમતિ મુજબ સંબંધ આગળ વધારવામાં સહાય.</p>
+<p id="service3">• એક વર્ષમાં લગ્ન ન થાય તો સભ્યતા મફતમાં લંબાવવાની સુવિધા માટે અમારી સાથે સંપર્ક કરો.</p>
+<p id="service4">• સભ્યતા લંબાવવાનો સમયગાળો અને પ્રક્રિયા બ્યુરો દ્વારા લેખિતમાં પુષ્ટિ કરવામાં આવશે.</p>
+</div>
+<p class="small" id="serviceNote">પ્રોફાઇલની ઉપલબ્ધતા, સાચી માહિતી અને બંને પક્ષની સંમતિ જરૂરી છે. લગ્નની ચોક્કસ તારીખ અથવા પરિણામની ખાતરી આપવામાં આવતી નથી.</p>
+</section>
 
-  <section class="card">
-    <h2 id="paymentTitle">💳 UPI દ્વારા પેમેન્ટ</h2>
-    <p id="paymentText">નીચેનો QR કોડ સ્કેન કરીને પેમેન્ટ કરી શકો છો.</p>
-    <img class="qr" src="IMG_20261007_165742.jpg" alt="UPI Payment QR Code">
-    <p><strong>UPI ID:</strong> prakashchauhan7188-3@oksbi</p>
-    <p class="small" id="paymentNote">પેમેન્ટ કરતા પહેલાં UPI નામ અને રકમ ચકાસો. પેમેન્ટ થયા પછી રસીદ સાચવી રાખો.</p>
-  </section>
+<section class="card">
+<h2 id="paymentTitle">💳 UPI દ્વારા પેમેન્ટ</h2>
+<p id="paymentText">QR કોડ સ્કેન કરીને રજિસ્ટ્રેશન ફી ચૂકવો.</p>
+<img class="qr" src="IMG_20261007_165742.jpg" alt="UPI Payment QR Code">
+<p><strong>UPI ID:</strong> <span id="upi">prakashchauhan7188-3@oksbi</span></p>
+<p class="small" id="paymentNote">પેમેન્ટ પહેલાં UPI નામ અને રકમ ચકાસો. રસીદ સાચવી રાખો. પેમેન્ટની પુષ્ટિ જાતે કરવામાં આવશે.</p>
+</section>
 
-  <section class="card">
-    <h2 id="importantTitle">ℹ️ મહત્વપૂર્ણ સૂચનાઓ</h2>
-    <div class="features">
-      <p id="notice1">• રજિસ્ટ્રેશન ફોર્મમાં સાચી માહિતી ભરો.</p>
-      <p id="notice2">• પેમેન્ટ કરતા પહેલાં તમામ શરતો સમજી લો.</p>
-      <p id="notice3">• પેમેન્ટની પુષ્ટિ પછી જ રજિસ્ટ્રેશનની પ્રક્રિયા આગળ વધશે.</p>
-      <p id="notice4">• સંબંધ અને લગ્નની ખાતરી આપવામાં આવતી નથી.</p>
-    </div>
-  </section>
+<section class="card">
+<h2 id="termsTitle">📌 મહત્વપૂર્ણ શરતો</h2>
+<div class="left">
+<p id="term1">1. રજિસ્ટ્રેશન ફોર્મમાં સાચી માહિતી આપવી જરૂરી છે.</p>
+<p id="term2">2. એક વર્ષની સભ્યતામાં 7–8 પ્રોફાઇલ પસંદ કરીને વાત આગળ વધારવાની સુવિધા આપવામાં આવશે, ઉપલબ્ધતા મુજબ.</p>
+<p id="term3">3. બંને પક્ષની સંમતિ વિના કોઈ સંબંધ આગળ વધારી શકાશે નહીં.</p>
+<p id="term4">4. એક વર્ષમાં લગ્ન ન થાય તો મફત સભ્યતા લંબાવવાની શરતો અને સમયગાળો બ્યુરો પાસેથી લેખિતમાં મેળવી લો.</p>
+<p id="term5">5. ખોટી માહિતી, પ્રોફાઇલની અનુપલબ્ધતા અથવા અન્ય પરિસ્થિતિઓ અંગે કોઈ વચન આપતાં પહેલાં બ્યુરોની પુષ્ટિ જરૂરી છે.</p>
+</div>
+</section>
 
-  <section class="card">
-    <h2 id="contactTitle">📱 સંપર્ક</h2>
-    <p id="contactText">ફક્ત WhatsApp — ફોન કોલ નહીં.</p>
-    <a class="button" href="https://wa.me/919173111399" id="contactButton"
-       target="_blank" rel="noopener">મેસેજ મોકલો</a>
-  </section>
+<section class="card">
+<h2 id="privacyTitle">🔒 પ્રાઇવસી</h2>
+<p id="privacyText">તમારી વ્યક્તિગત માહિતી રજિસ્ટ્રેશન અને સંબંધિત સેવા માટે જ આપો. અન્ય વ્યક્તિની ખાનગી માહિતી તેમની સંમતિ વિના શેર ન કરો.</p>
+</section>
+
+<section class="card">
+<h2 id="contactTitle">📱 સંપર્ક કરો</h2>
+<p id="contactText">ફક્ત WhatsApp — ફોન કોલ નહીં.</p>
+<a class="btn" href="https://wa.me/919173111399" id="waBtn" target="_blank" rel="noopener">WhatsApp પર મેસેજ કરો</a>
+</section>
 </main>
 
 <footer>
-  <p>Chamunda Marriage Beuro</p>
-  <p>Anjar, Kutch, Gujarat</p>
-  <p id="footerText">તમારા નવા જીવનની શરૂઆત માટે શુભેચ્છાઓ 💐</p>
+<p>Chamunda Marriage Beuro</p>
+<p>Anjar, Kutch, Gujarat</p>
+<p id="footerText">તમારા નવા જીવનની શરૂઆત માટે શુભેચ્છાઓ 💐</p>
 </footer>
 
 <script>
-const translations = {
-gu: {
-tagline:"તમારી પસંદગી મુજબ યોગ્ય જીવનસાથી શોધવામાં સહાય.",
-languageLabel:"ભાષા પસંદ કરો:",
-welcome:"લગ્ન માટે યોગ્ય જીવનસાથી શોધો",
-intro:"તમારી પસંદગી અને જરૂરિયાત મુજબ લગ્ન માટે યોગ્ય સંબંધ શોધવામાં અમે મદદ કરીએ છીએ.",
-feature1:"💍 લગ્ન માટે યોગ્ય બાયોડેટાની માહિતી",
-feature2:"🤝 તમારી પસંદગી મુજબ સંબંધ શોધવામાં સહાય",
-feature3:"📋 રજિસ્ટ્રેશન પછી પ્રોફાઇલની માહિતી",
-registrationTitle:"લગ્ન રજિસ્ટ્રેશન",
-registrationText:"રજિસ્ટ્રેશનની માન્યતા: 1 વર્ષ",
-fee:"રજિસ્ટ્રેશન ફી: ₹999",
-formButton:"રજિસ્ટ્રેશન ફોર્મ ભરો",
-searchTitle:"🔎 જીવનસાથી શોધવા માટે સંપર્ક કરો",
-searchText:"તમારી પસંદગી, ઉંમર અને શહેર વિશે માહિતી આપવા માટે WhatsApp પર સંપર્ક કરો.",
-searchButton:"WhatsApp પર સંપર્ક કરો",
-searchNote:"પ્રોફાઇલની માહિતી રજિસ્ટ્રેશન અને ઉપલબ્ધતાના આધારે આપવામાં આવશે.",
-paymentTitle:"💳 UPI દ્વારા પેમેન્ટ",
-paymentText:"નીચેનો QR કોડ સ્કેન કરીને પેમેન્ટ કરી શકો છો.",
-paymentNote:"પેમેન્ટ કરતા પહેલાં UPI નામ અને રકમ ચકાસો. પેમેન્ટ થયા પછી રસીદ સાચવી રાખો.",
-importantTitle:"ℹ️ મહત્વપૂર્ણ સૂચનાઓ",
-notice1:"• રજિસ્ટ્રેશન ફોર્મમાં સાચી માહિતી ભરો.",
-notice2:"• પેમેન્ટ કરતા પહેલાં તમામ શરતો સમજી લો.",
-notice3:"• પેમેન્ટની પુષ્ટિ પછી જ રજિસ્ટ્રેશનની પ્રક્રિયા આગળ વધશે.",
-notice4:"• સંબંધ અને લગ્નની ખાતરી આપવામાં આવતી નથી.",
-contactTitle:"📱 સંપર્ક",
-contactText:"ફક્ત WhatsApp — ફોન કોલ નહીં.",
-contactButton:"મેસેજ મોકલો",
-footerText:"તમારા નવા જીવનની શરૂઆત માટે શુભેચ્છાઓ 💐"
+const T={
+gu:{
+title:"💍 Chamunda Marriage Beuro",tagline:"તમારી પસંદગી મુજબ યોગ્ય જીવનસાથી શોધવામાં સહાય.",languageLabel:"ભાષા પસંદ કરો",
+welcome:"🙏 આપનું સ્વાગત છે",intro:"લગ્ન માટે યોગ્ય જીવનસાથી શોધવામાં અમે તમારી પસંદગી મુજબ મદદ કરીએ છીએ.",feature1:"💍 યોગ્ય બાયોડેટાની માહિતી",feature2:"🤝 તમારી પસંદગી મુજબ સંબંધ શોધવામાં સહાય",feature3:"📋 રજિસ્ટ્રેશન પછી ઉપલબ્ધ પ્રોફાઇલની માહિતી",
+regTitle:"💍 લગ્ન રજિસ્ટ્રેશન",validity:"સભ્યતાની માન્યતા: 1 વર્ષ",fee:"રજિસ્ટ્રેશન ફી: ₹999",formInfo:"રજિસ્ટ્રેશન માટે નીચેનું ફોર્મ ભરો.",formBtn:"રજિસ્ટ્રેશન ફોર્મ ભરો",
+serviceTitle:"💐 અમારી સેવા અને સભ્યતા",service1:"• એક વર્ષની સભ્યતા દરમિયાન 7–8 યોગ્ય પ્રોફાઇલ પસંદ કરીને આગળ વાતચીત કરવાની સુવિધા.",service2:"• પ્રોફાઇલની ઉપલબ્ધતા અને બંને પક્ષની સંમતિ મુજબ સંબંધ આગળ વધારવામાં સહાય.",service3:"• એક વર્ષમાં લગ્ન ન થાય તો સભ્યતા મફતમાં લંબાવવાની સુવિધા માટે અમારી સાથે સંપર્ક કરો.",service4:"• સભ્યતા લંબાવવાનો સમયગાળો અને પ્રક્રિયા બ્યુરો દ્વારા લેખિતમાં પુષ્ટિ કરવામાં આવશે.",serviceNote:"પ્રોફાઇલની ઉપલબ્ધતા, સાચી માહિતી અને બંને પક્ષની સંમતિ જરૂરી છે. લગ્નની ચોક્કસ તારીખ અથવા પરિણામની ખાતરી આપવામાં આવતી નથી.",
+paymentTitle:"💳 UPI દ્વારા પેમેન્ટ",paymentText:"QR કોડ સ્કેન કરીને રજિસ્ટ્રેશન ફી ચૂકવો.",paymentNote:"પેમેન્ટ પહેલાં UPI નામ અને રકમ ચકાસો. રસીદ સાચવી રાખો. પેમેન્ટની પુષ્ટિ જાતે કરવામાં આવશે.",
+termsTitle:"📌 મહત્વપૂર્ણ શરતો",term1:"1. રજિસ્ટ્રેશન ફોર્મમાં સાચી માહિતી આપવી જરૂરી છે.",term2:"2. એક વર્ષની સભ્યતામાં 7–8 પ્રોફાઇલ પસંદ કરીને વાત આગળ વધારવાની સુવિધા આપવામાં આવશે, ઉપલબ્ધતા મુજબ.",term3:"3. બંને પક્ષની સંમતિ વિના કોઈ સંબંધ આગળ વધારી શકાશે નહીં.",term4:"4. એક વર્ષમાં લગ્ન ન થાય તો મફત સભ્યતા લંબાવવાની શરતો અને સમયગાળો બ્યુરો પાસેથી લેખિતમાં મેળવી લો.",term5:"5. ખોટી માહિતી, પ્રોફાઇલની અનુપલબ્ધતા અથવા અન્ય પરિસ્થિતિઓ અંગે કોઈ વચન આપતાં પહેલાં બ્યુરોની પુષ્ટિ જરૂરી છે.",
+privacyTitle:"🔒 પ્રાઇવસી",privacyText:"તમારી વ્યક્તિગત માહિતી રજિસ્ટ્રેશન અને સંબંધિત સેવા માટે જ આપો. અન્ય વ્યક્તિની ખાનગી માહિતી તેમની સંમતિ વિના શેર ન કરો.",contactTitle:"📱 સંપર્ક કરો",contactText:"ફક્ત WhatsApp — ફોન કોલ નહીં.",waBtn:"WhatsApp પર મેસેજ કરો",footerText:"તમારા નવા જીવનની શરૂઆત માટે શુભેચ્છાઓ 💐"
 },
-hi: {
-tagline:"आपकी पसंद के अनुसार योग्य जीवनसाथी खोजने में सहायता।",
-languageLabel:"भाषा चुनें:",
-welcome:"विवाह के लिए योग्य जीवनसाथी खोजें",
-intro:"आपकी पसंद और जरूरत के अनुसार विवाह के लिए उपयुक्त रिश्ता खोजने में हम सहायता करते हैं।",
-feature1:"💍 विवाह के लिए उपयुक्त बायोडाटा की जानकारी",
-feature2:"🤝 आपकी पसंद के अनुसार रिश्ता खोजने में सहायता",
-feature3:"📋 रजिस्ट्रेशन के बाद प्रोफाइल की जानकारी",
-registrationTitle:"विवाह रजिस्ट्रेशन",
-registrationText:"रजिस्ट्रेशन की वैधता: 1 वर्ष",
-fee:"रजिस्ट्रेशन शुल्क: ₹999",
-formButton:"रजिस्ट्रेशन फॉर्म भरें",
-searchTitle:"🔎 जीवनसाथी खोजने के लिए संपर्क करें",
-searchText:"अपनी पसंद, उम्र और शहर की जानकारी देने के लिए WhatsApp पर संपर्क करें।",
-searchButton:"WhatsApp पर संपर्क करें",
-searchNote:"प्रोफाइल की जानकारी रजिस्ट्रेशन और उपलब्धता के आधार पर दी जाएगी।",
-paymentTitle:"💳 UPI से भुगतान",
-paymentText:"नीचे दिया गया QR कोड स्कैन करके भुगतान कर सकते हैं।",
-paymentNote:"भुगतान से पहले UPI नाम और राशि जाँचें। भुगतान के बाद रसीद सुरक्षित रखें।",
-importantTitle:"ℹ️ महत्वपूर्ण सूचनाएँ",
-notice1:"• रजिस्ट्रेशन फॉर्म में सही जानकारी भरें।",
-notice2:"• भुगतान से पहले सभी शर्तें समझ लें।",
-notice3:"• भुगतान की पुष्टि के बाद ही रजिस्ट्रेशन प्रक्रिया आगे बढ़ेगी।",
-notice4:"• रिश्ता या विवाह होने की गारंटी नहीं दी जाती।",
-contactTitle:"📱 संपर्क",
-contactText:"केवल WhatsApp — फोन कॉल नहीं।",
-contactButton:"मैसेज भेजें",
-footerText:"आपके नए जीवन की शुरुआत के लिए शुभकामनाएँ 💐"
+hi:{
+title:"💍 Chamunda Marriage Beuro",tagline:"आपकी पसंद के अनुसार योग्य जीवनसाथी खोजने में सहायता।",languageLabel:"भाषा चुनें",
+welcome:"🙏 आपका स्वागत है",intro:"विवाह के लिए योग्य जीवनसाथी खोजने में हम आपकी पसंद के अनुसार सहायता करते हैं।",feature1:"💍 उपयुक्त बायोडाटा की जानकारी",feature2:"🤝 आपकी पसंद के अनुसार रिश्ता खोजने में सहायता",feature3:"📋 रजिस्ट्रेशन के बाद उपलब्ध प्रोफाइल की जानकारी",
+regTitle:"💍 विवाह रजिस्ट्रेशन",validity:"सदस्यता की अवधि: 1 वर्ष",fee:"रजिस्ट्रेशन शुल्क: ₹999",formInfo:"रजिस्ट्रेशन के लिए नीचे दिया फॉर्म भरें।",formBtn:"रजिस्ट्रेशन फॉर्म भरें",
+serviceTitle:"💐 हमारी सेवा और सदस्यता",service1:"• एक वर्ष की सदस्यता में उपलब्धता के अनुसार 7–8 उपयुक्त प्रोफाइल चुनकर आगे बातचीत करने की सुविधा।",service2:"• प्रोफाइल की उपलब्धता और दोनों पक्षों की सहमति के अनुसार सहायता।",service3:"• एक वर्ष में विवाह न होने पर सदस्यता मुफ्त बढ़ाने की सुविधा के लिए हमसे संपर्क करें।",service4:"• सदस्यता बढ़ाने की अवधि और प्रक्रिया की लिखित पुष्टि ब्यूरो से प्राप्त करें।",serviceNote:"प्रोफाइल की उपलब्धता, सही जानकारी और दोनों पक्षों की सहमति आवश्यक है। विवाह की निश्चित तारीख या परिणाम की गारंटी नहीं दी जाती।",
+paymentTitle:"💳 UPI से भुगतान",paymentText:"QR कोड स्कैन करके रजिस्ट्रेशन शुल्क चुकाएँ।",paymentNote:"भुगतान से पहले UPI नाम और राशि जाँचें। रसीद सुरक्षित रखें। भुगतान की पुष्टि मैन्युअल रूप से की जाएगी।",
+termsTitle:"📌 महत्वपूर्ण शर्तें",term1:"1. रजिस्ट्रेशन फॉर्म में सही जानकारी देना आवश्यक है।",term2:"2. एक वर्ष में उपलब्धता के अनुसार 7–8 प्रोफाइल चुनकर बातचीत आगे बढ़ाने की सुविधा होगी।",term3:"3. दोनों पक्षों की सहमति के बिना रिश्ता आगे नहीं बढ़ाया जाएगा।",term4:"4. एक वर्ष में विवाह न होने पर मुफ्त सदस्यता बढ़ाने की शर्तें और अवधि ब्यूरो से लिखित में लें।",term5:"5. गलत जानकारी या प्रोफाइल उपलब्ध न होने जैसी परिस्थितियों में ब्यूरो से पुष्टि आवश्यक है।",
+privacyTitle:"🔒 गोपनीयता",privacyText:"अपनी व्यक्तिगत जानकारी केवल रजिस्ट्रेशन और संबंधित सेवा के लिए दें। किसी अन्य व्यक्ति की निजी जानकारी उसकी सहमति के बिना साझा न करें।",contactTitle:"📱 संपर्क करें",contactText:"केवल WhatsApp — फोन कॉल नहीं।",waBtn:"WhatsApp पर मैसेज करें",footerText:"आपके नए जीवन की शुरुआत के लिए शुभकामनाएँ 💐"
 },
-en: {
-tagline:"Helping you find a suitable life partner according to your preferences.",
-languageLabel:"Choose language:",
-welcome:"Find a Suitable Life Partner",
-intro:"We help you explore suitable marriage matches according to your preferences and needs.",
-feature1:"💍 Matrimonial biodata information",
-feature2:"🤝 Assistance in finding matches based on your preferences",
-feature3:"📋 Profile information after registration",
-registrationTitle:"Marriage Registration",
-registrationText:"Registration validity: 1 year",
-fee:"Registration fee: ₹999",
-formButton:"Fill Registration Form",
-searchTitle:"🔎 Contact Us to Find a Match",
-searchText:"Contact us on WhatsApp and share your preferences, age and city.",
-searchButton:"Contact on WhatsApp",
-searchNote:"Profile information depends on registration and availability.",
-paymentTitle:"💳 Pay by UPI",
-paymentText:"Scan the QR code below to make a payment.",
-paymentNote:"Check the UPI name and amount before paying. Keep your payment receipt.",
-importantTitle:"ℹ️ Important Information",
-notice1:"• Enter accurate information in the registration form.",
-notice2:"• Read all terms before making a payment.",
-notice3:"• Registration processing continues after payment confirmation.",
-notice4:"• A match or marriage is not guaranteed.",
-contactTitle:"📱 Contact",
-contactText:"WhatsApp only — no phone calls.",
-contactButton:"Send Message",
-footerText:"Best wishes for the beginning of your new journey 💐"
+en:{
+title:"💍 Chamunda Marriage Beuro",tagline:"Helping you find a suitable life partner according to your preferences.",languageLabel:"Choose language",
+welcome:"🙏 Welcome",intro:"We help you explore suitable marriage matches according to your preferences.",feature1:"💍 Suitable matrimonial biodata information",feature2:"🤝 Assistance in finding matches based on your preferences",feature3:"📋 Available profile information after registration",
+regTitle:"💍 Marriage Registration",validity:"Membership validity: 1 year",fee:"Registration fee: ₹999",formInfo:"Complete the form below to register.",formBtn:"Fill Registration Form",
+serviceTitle:"💐 Our Service and Membership",service1:"• During the one-year membership, you may select 7–8 suitable profiles for further discussion, subject to availability.",service2:"• We assist with further communication subject to profile availability and consent from both parties.",service3:"• If marriage does not take place within one year, contact us about extending membership free of charge.",service4:"• Obtain written confirmation from the bureau about the extension period and process.",serviceNote:"Profile availability, accurate information and consent from both parties are required. A specific marriage date or outcome is not guaranteed.",
+paymentTitle:"💳 Pay by UPI",paymentText:"Scan the QR code to pay the registration fee.",paymentNote:"Verify the UPI name and amount before paying. Keep your receipt. Payments are verified manually.",
+termsTitle:"📌 Important Terms",term1:"1. Accurate information must be provided in the registration form.",term2:"2. During the one-year membership, you may select 7–8 profiles for further discussion, subject to availability.",term3:"3. No match can proceed without consent from both parties.",term4:"4. If marriage does not take place within one year, obtain written details of the free membership extension terms and duration from the bureau.",term5:"5. Contact the bureau for confirmation regarding inaccurate information, unavailable profiles or other circumstances.",
+privacyTitle:"🔒 Privacy",privacyText:"Provide personal information only for registration and related services. Do not share another person's private information without their consent.",contactTitle:"📱 Contact Us",contactText:"WhatsApp only — no phone calls.",waBtn:"Message on WhatsApp",footerText:"Best wishes for the beginning of your new journey 💐"
 }
 };
-
-function changeLanguage(lang) {
-  const data = translations[lang] || translations.gu;
-  Object.keys(data).forEach(function(id) {
-    const element = document.getElementById(id);
-    if (element) element.textContent = data[id];
-  });
-  document.documentElement.lang = lang;
+function changeLanguage(lang){
+const data=T[lang]||T.gu;
+Object.keys(data).forEach(id=>{
+const el=document.getElementById(id);
+if(el)el.textContent=data[id];
+});
+document.documentElement.lang=lang;
 }
 </script>
 </body>
 </html>
-

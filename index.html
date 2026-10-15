@@ -1,62 +1,75 @@
-<!DOCTYPE html><html lang="gu">
+<!DOCTYPE html>
+<html lang="gu">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chamunda Marriage Beuro</title>
 <style>
 body{font-family:Arial,sans-serif;margin:0;background:#fff7f8;color:#333;text-align:center}
-header{background:#8b1e3f;color:white;padding:28px 12px}
-h1{margin:0;font-size:28px}
-main{padding:22px}
+header{background:#8b1e3f;color:white;padding:24px 12px}
+h1{font-size:26px}
 .card{background:white;margin:16px auto;padding:20px;border-radius:12px;max-width:500px;box-shadow:0 2px 10px #ddd}
-button,a{background:#087f46;color:white;padding:13px 18px;border:0;border-radius:8px;text-decoration:none;display:inline-block;margin:8px}
-.fee{font-size:24px;color:#8b1e3f;font-weight:bold}
-footer{padding:20px;background:#f2e1e5}
+button,a{background:#087f46;color:white;padding:13px 18px;border:0;border-radius:8px;text-decoration:none;display:inline-block;margin:8px;font-size:16px}
+select{padding:10px;font-size:16px;border-radius:8px}
+.fee{font-size:22px;color:#8b1e3f;font-weight:bold}
+img{max-width:220px;width:100%;height:auto}
 </style>
 </head>
 <body>
 <header>
-<h1>💍 Chamunda Marriage Beuro</h1>
-<p>તમારા જીવનસાથીની શોધમાં વિશ્વાસપાત્ર સહાય</p>
-</header>
-<main>
-<div class="card">
-<h2>લગ્ન રજિસ્ટ્રેશન</h2>
-<p>તમારી પસંદગી મુજબ યોગ્ય જીવનસાથી શોધવામાં સહાય.</p>
-<p>રજિસ્ટ્રેશનની માન્યતા: 1 વર્ષ</p>
-<p class="fee">રજિસ્ટ્રેશન ફી ₹999</p>
-<p>પેમેન્ટ UPI દ્વારા કરી શકો છો.</p>
-<p><b>UPI ID:</b> prakashchauhan7188-3@oksbi</p>
-<p>પેમેન્ટ કરતા પહેલાં UPI નામ ચકાસો.</p>
-</div>
-<div class="card">
-<h2>રજિસ્ટ્રેશન માટે સંપર્ક કરો</h2>
-<p>ફક્ત WhatsApp — કૉલ નહીં</p>
-<a href="https://wa.me/919173111399?text=Namaste%2C%20mujhe%20marriage%20registration%20ki%20jankari%20chahiye">WhatsApp પર સંપર્ક કરો</a>
-</div>
-<div class="card">
-<h2>મહત્વપૂર્ણ સૂચના</h2>
-<p>રજિસ્ટ્રેશન પછી જ પ્રોફાઇલની માહિતી ઉપલબ્ધ કરાવવામાં આવશે. પેમેન્ટ કરતા પહેલાં બધી શરતો સમજી લો.</p>
-</div>
-</main>
-<div class="card">
-<h2>UPI દ્વારા પેમેન્ટ કરો</h2>
-<p>QR સ્કેન કરીને ₹999 રજિસ્ટ્રેશન ફી ચૂકવો.</p>
-<img src="IMG_20261007_165742.jpg" alt="UPI Payment QR Code" style="width:220px;max-width:100%;height:auto;">
-</div>
-<div class="card">
-<h2>લગ્ન રજિસ્ટ્રેશન ફોર્મ</h2>
-<p>રજિસ્ટ્રેશન માટે નીચેના બટન પર ક્લિક કરો.</p>
-<a class="button" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank">ફોર્મ ભરો</a>
-</div>
-<footer>Chamunda Marriage Beuro · Anjar, Kutch, Gujarat</footer>
-  <div style="padding:10px">
-<select onchange="document.documentElement.lang=this.value">
+<h1>Chamunda Marriage Beuro</h1>
+<p id="intro">તમારી પસંદગી મુજબ યોગ્ય જીવનસાથી શોધવામાં સહાય.</p>
+<select onchange="changeLang(this.value)">
 <option value="gu">ગુજરાતી</option>
 <option value="hi">हिंदी</option>
 <option value="en">English</option>
 </select>
-  </div>
+</header>
+
+<div class="card">
+<h2 id="service">લગ્ન રજિસ્ટ્રેશન</h2>
+<p id="description">લગ્ન માટે યોગ્ય જીવનસાથી શોધવામાં સહાય.</p>
+<p id="validity">રજિસ્ટ્રેશન માન્યતા: 1 વર્ષ</p>
+<p class="fee" id="fee">રજિસ્ટ્રેશન ફી ₹999</p>
+</div>
+
+<div class="card">
+<h2 id="whatsappTitle">રજિસ્ટ્રેશન માટે સંપર્ક કરો</h2>
+<p id="contact">ફક્ત WhatsApp — કોલ નહીં</p>
+<a href="https://wa.me/919173111399" id="whatsapp">WhatsApp પર મેસેજ કરો</a>
+</div>
+
+<div class="card">
+<h2 id="important">મહત્વપૂર્ણ સૂચના</h2>
+<p id="notice">રજિસ્ટ્રેશન પછી પ્રોફાઇલની માહિતી ઉપલબ્ધ કરાવવામાં આવશે. પેમેન્ટ પહેલાં બધી શરતો સમજી લો.</p>
+</div>
+
+<div class="card">
+<h2 id="payment">UPI દ્વારા પેમેન્ટ કરો</h2>
+<p id="scan">QR સ્કેન કરીને રજિસ્ટ્રેશન ફી ચૂકવો.</p>
+<img src="IMG_20261007_165742.jpg" alt="UPI Payment QR Code">
+<p>UPI ID: prakashchauhan718-3@oksbi</p>
+</div>
+
+<div class="card">
+<h2 id="formTitle">લગ્ન રજિસ્ટ્રેશન ફોર્મ</h2>
+<p id="formText">રજિસ્ટ્રેશન માટે નીચેના બટન પર ક્લિક કરો.</p>
+<a href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" id="formButton">ફોર્મ ભરો</a>
+</div>
+
+<footer style="padding:20px">Chamunda Marriage Beuro · Anjar, Kutch, Gujarat</footer>
+
+<script>
+const words={
+gu:["તમારી પસંદગી મુજબ યોગ્ય જીવનસાથી શોધવામાં સહાય.","લગ્ન રજિસ્ટ્રેશન","લગ્ન માટે યોગ્ય જીવનસાથી શોધવામાં સહાય.","રજિસ્ટ્રેશન માન્યતા: 1 વર્ષ","રજિસ્ટ્રેશન ફી ₹999","રજિસ્ટ્રેશન માટે સંપર્ક કરો","ફક્ત WhatsApp — કોલ નહીં","WhatsApp પર મેસેજ કરો","મહત્વપૂર્ણ સૂચના","રજિસ્ટ્રેશન પછી પ્રોફાઇલની માહિતી ઉપલબ્ધ કરાવવામાં આવશે. પેમેન્ટ પહેલાં બધી શરતો સમજી લો.","UPI દ્વારા પેમેન્ટ કરો","QR સ્કેન કરીને રજિસ્ટ્રેશન ફી ચૂકવો.","લગ્ન રજિસ્ટ્રેશન ફોર્મ","રજિસ્ટ્રેશન માટે નીચેના બટન પર ક્લિક કરો.","ફોર્મ ભરો"],
+hi:["आपकी पसंद के अनुसार योग्य जीवनसाथी खोजने में सहायता।","विवाह रजिस्ट्रेशन","विवाह के लिए योग्य जीवनसाथी खोजने में सहायता।","रजिस्ट्रेशन की वैधता: 1 वर्ष","रजिस्ट्रेशन शुल्क ₹999","रजिस्ट्रेशन के लिए संपर्क करें","केवल WhatsApp — कॉल नहीं","WhatsApp पर मैसेज करें","महत्वपूर्ण सूचना","रजिस्ट्रेशन के बाद प्रोफाइल की जानकारी दी जाएगी। भुगतान से पहले सभी शर्तें समझ लें।","UPI से भुगतान करें","QR स्कैन करके रजिस्ट्रेशन शुल्क चुकाएँ।","विवाह रजिस्ट्रेशन फॉर्म","रजिस्ट्रेशन के लिए नीचे दिए बटन पर क्लिक करें।","फॉर्म भरें"],
+en:["Find a suitable life partner according to your preferences.","Marriage Registration","Assistance in finding a suitable life partner.","Registration validity: 1 year","Registration fee ₹999","Contact for registration","WhatsApp only — no calls","Message on WhatsApp","Important Notice","Profile information will be provided after registration. Please understand all terms before payment.","Pay by UPI","Scan the QR code to pay the registration fee.","Marriage Registration Form","Click the button below to register.","Fill Form"]
+};
+function changeLang(lang){
+const ids=["intro","service","description","validity","fee","whatsappTitle","contact","whatsapp","important","notice","payment","scan","formTitle","formText","formButton"];
+ids.forEach((id,i)=>document.getElementById(id).textContent=words[lang][i]);
+document.documentElement.lang=lang;
+}
+</script>
 </body>
 </html>
-

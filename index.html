@@ -155,52 +155,115 @@ footer p{font-size:14px;color:#ffe8ef}
 <p data-gu="સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે આગળ વધો" data-hi="सही जानकारी दें • नियम पढ़ें • सुरक्षित तरीके से आगे बढ़ें" data-en="Provide accurate information • Read the terms • Proceed safely">સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે આગળ વધો</p>
 </footer>
 
-<script>
-const sel=document.getElementById('lang');
+const sel = document.getElementById('lang');
 
-sel.addEventListener('change',()=>{
-  const l=sel.value;
-  document.documentElement.lang=l;
-  document.querySelectorAll('[data-'+l+']').forEach(e=>{
-    e.textContent=e.getAttribute('data-'+l);
+sel.addEventListener('change', () => {
+  const l = sel.value;
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-' + l + ']').forEach(el => {
+    el.textContent = el.getAttribute('data-' + l);
   });
 });
 
-const modal=document.getElementById('regModal');
-
-document.querySelectorAll('.more').forEach(button=>{
-  button.addEventListener('click',()=>{
-    const l=sel.value;
-    const profile=button.getAttribute('data-profile');
-    const text={
-      gu:profile+' માટે સંપૂર્ણ માહિતી મેળવવા પહેલાં રજિસ્ટ્રેશન ફોર્મ ભરો. સભ્યપદની ચકાસણી અલગથી કરવામાં આવશે.',
-      hi:profile+' की पूरी जानकारी पाने से पहले रजिस्ट्रेशन फॉर्म भरें। सदस्यता अलग से सत्यापित की जाएगी।',
-      en:'Complete the registration form to request full details for '+profile+'. Membership is verified separately.'
-    };
-    document.getElementById('modalText').textContent=text[l];
-    modal.style.display='flex';
-  });
-});
-
-document.getElementById('closeModal').addEventListener('click',()=>{
-  modal.style.display='none';
-});
-
-modal.addEventListener('click',e=>{
-  if(e.target===modal) modal.style.display='none';
-});
-
-document.getElementById('copy').addEventListener('click',async()=>{
-  const id='prakashchauhan7188-3@oksbi';
-  const button=document.getElementById('copy');
-  try{
+document.getElementById('copy').addEventListener('click', async () => {
+  const id = 'prakashchauhan7188-3@oksbi';
+  try {
     await navigator.clipboard.writeText(id);
-    button.textContent=sel.value==='hi'?'कॉपी हो गया':
-      sel.value==='en'?'Copied':'કોપી થઈ ગયું';
-  }catch(e){
-    prompt('UPI ID કોપી કરો:',id);
+    alert('UPI ID કોપી થઈ ગયું');
+  } catch (e) {
+    prompt('UPI ID કોપી કરો:', id);
   }
 });
-</script>
-</body>
-</html>
+
+// અહીં સંમતિથી મળેલી વાસ્તવિક પ્રોફાઇલ ઉમેરો.
+const profiles = [];
+
+const list = document.getElementById('profileList');
+const pages = document.getElementById('pagination');
+const count = document.getElementById('profileCount');
+const modal = document.getElementById('regModal');
+let page = 1;
+const perPage = 12;
+
+function renderProfiles() {
+  const city = document.getElementById('searchCity').value.trim().toLowerCase();
+  const age = document.getElementById('searchAge').value;
+
+  const filtered = profiles.filter(p => {
+    const cityMatch = (p.city || '').toLowerCase().includes(city);
+    let ageMatch = true;
+    if (age === '18-25') ageMatch = p.age >= 18 && p.age <= 25;
+    if (age === '26-30') ageMatch = p.age >= 26 && p.age <= 30;
+    if (age === '31-35') ageMatch = p.age >= 31 && p.age <= 35;
+    return cityMatch && ageMatch;
+  });
+
+  const totalPages = Math.ceil(filtered.length / perPage);
+  page = Math.max(1, Math.min(page, totalPages || 1));
+  count.textContent = 'કુલ પ્રોફાઇલ: ' + filtered.length;
+  list.replaceChildren();
+  pages.replaceChildren();
+
+  if (!filtered.length) {
+    list.textContent = 'હાલમાં કોઈ પ્રોફાઇલ ઉમેરેલી નથી.';
+    return;
+  }
+
+  filtered.slice((page - 1) * perPage, page * perPage).forEach(p => {
+    const card = document.createElement('article');
+    card.className = 'profile';
+
+    const img = document.createElement('img');
+    img.src = p.photo;
+    img.alt = 'પ્રોફાઇલ ફોટો';
+    img.loading = 'lazy';
+    img.onerror = () => { img.style.display = 'none'; };
+
+    const name = document.createElement('h3');
+    name.textContent = p.name;
+
+    const details = document.createElement('p');
+    details.textContent =
+      'ઉંમર: ' + p.age + ' વર્ષ\n' +
+      'શિક્ષણ: ' + p.education + '\n' +
+      'શહેર: ' + p.city;
+    details.style.whiteSpace = 'pre-line';
+
+    const button = document.createElement('button');
+    button.className = 'btn';
+    button.textContent = 'વધુ માહિતી';
+    button.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    card.append(img, name, details, button);
+    list.append(card);
+  });
+
+  for (let i = 1; i <= totalPages; i++) {
+    const b = document.createElement('button');
+    b.textContent = i;
+    if (i === page) b.className = 'active';
+    b.addEventListener('click', () => {
+      page = i;
+      renderProfiles();
+    });
+    pages.append(b);
+  }
+}
+
+document.getElementById('searchBtn').addEventListener('click', () => {
+  page = 1;
+  renderProfiles();
+});
+
+document.getElementById('closeModal').addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
+});
+
+renderProfiles();
+    

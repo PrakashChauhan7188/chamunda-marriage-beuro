@@ -1,37 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="gu">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#74163f">
+<meta name="theme-color" content="#741238">
 <title>Chamunda Marriage Beuro</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fff8f3;color:#30252b;line-height:1.7}
-header{background:linear-gradient(135deg,#74163f,#b74777);color:white;text-align:center;padding:28px 16px}
-header h1{margin:0;font-size:30px}
+body{margin:0;font-family:Arial,sans-serif;background:#fff8ef;color:#34232a;line-height:1.7}
+header{background:linear-gradient(135deg,#570b2b,#a52d5c);color:white;text-align:center;padding:28px 16px;border-bottom:4px solid #e1bd70}
+.logo{width:78px;height:78px;margin:auto auto 12px;border:2px solid #e1bd70;border-radius:24px;display:grid;place-items:center;font-size:40px;background:#ffffff15}
+h1{font-size:30px;line-height:1.2;margin:0}
+header p{color:#ffebc6}
+select{padding:10px;border-radius:10px;border:0;font-size:16px}
 main{max-width:760px;margin:auto;padding:14px}
-.card{background:white;border-radius:14px;padding:20px;margin:16px 0;border:1px solid #f0e1e7;box-shadow:0 3px 12px #00000010}
-h2{color:#74163f;font-size:21px;margin-top:0}
-.price{text-align:center;font-size:34px;font-weight:bold;color:#a52d60}
-.btn{display:block;background:#74163f;color:white;text-align:center;text-decoration:none;padding:14px;border-radius:9px;margin-top:14px;font-weight:bold}
-.green{background:#26734d}
-select{padding:10px;border-radius:8px;font-size:16px}
-.qr{display:block;width:100%;max-width:300px;height:auto;margin:15px auto}
-.note{background:#fff1d6;padding:12px;border-radius:9px}
-footer{background:#74163f;color:white;text-align:center;padding:20px}
-li{margin-bottom:8px}
+.card{background:white;border:1px solid #f0dfe5;border-radius:22px;padding:22px;margin:16px 0;box-shadow:0 8px 24px #520c2510}
+h2{color:#741238;margin:0 0 12px;font-size:23px}
+p{font-size:17px}
+.fee{text-align:center;font-size:44px;font-weight:bold;color:#a52d5c}
+.muted{text-align:center;color:#725e67;font-size:14px}
+.btn{display:block;width:100%;text-align:center;background:#741238;color:white;text-decoration:none;border:0;border-radius:14px;padding:14px;margin:14px 0;font-size:17px;font-weight:bold;cursor:pointer}
+.green{background:#28764e}
+.qr{display:block;width:100%;max-width:360px;height:auto;margin:16px auto;border-radius:12px}
+.upi{text-align:center;font-weight:bold;overflow-wrap:anywhere}
+.note{background:#fff1d2;border-radius:14px;padding:14px;margin-top:14px}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tile{padding:12px;text-align:center;background:#fff5f8;border:1px solid #f0dfe5;border-radius:14px;color:#741238;font-weight:bold}
+li{margin:10px 0}
+footer{text-align:center;background:#570b2b;color:white;padding:24px 12px}
+footer p{font-size:14px;color:#ffe8ef}
+@media(min-width:600px){main{padding:24px}.card{padding:28px}.tiles{grid-template-columns:repeat(4,1fr)}}
 </style>
 </head>
 <body>
 
 <header>
-<h1>Chamunda Marriage Beuro</h1>
-<p data-gu="લગ્ન માટે યોગ્ય જીવનસાથી શોધવામાં સહાય"
-data-hi="विवाह के लिए योग्य जीवनसाथी खोजने में सहायता"
-data-en="Helping you find a suitable life partner">લગ્ન માટે યોગ્ય જીવનસાથી શોધવામાં સહાય</p>
-<select aria-label="Language" onchange="setLanguage(this.value)">
+<div class="logo">💍</div>
+<h1>Chamunda<br>Marriage Beuro</h1>
+<p>લગ્ન માટે યોગ્ય જીવનસાથીની શોધમાં સહાય</p>
+<label for="lang">ભાષા પસંદ કરો</label><br>
+<select id="lang">
 <option value="gu">ગુજરાતી</option>
 <option value="hi">हिन्दी</option>
 <option value="en">English</option>
@@ -40,87 +48,81 @@ data-en="Helping you find a suitable life partner">લગ્ન માટે ય
 
 <main>
 <section class="card">
-<h2 data-gu="અમારી સેવા વિશે" data-hi="हमारी सेवा के बारे में" data-en="About Our Service">અમારી સેવા વિશે</h2>
-<p data-gu="લગ્ન માટે યોગ્ય બાયોડેટા અને જીવનસાથી શોધવામાં સહાય માટે અમારી સેવા ઉપલબ્ધ છે. રજિસ્ટ્રેશન પહેલાં તમામ નિયમો ધ્યાનથી વાંચો."
-data-hi="विवाह के लिए उपयुक्त बायोडाटा और जीवनसाथी खोजने में सहायता के लिए हमारी सेवा उपलब्ध है। रजिस्ट्रेशन से पहले सभी नियम ध्यान से पढ़ें।"
-data-en="Our service assists with finding suitable matrimonial biodata and a life partner. Read all rules carefully before registering.">લગ્ન માટે યોગ્ય બાયોડેટા અને જીવનસાથી શોધવામાં સહાય માટે અમારી સેવા ઉપલબ્ધ છે. રજિસ્ટ્રેશન પહેલાં તમામ નિયમો ધ્યાનથી વાંચો.</p>
+<h2 data-gu="અમારી સેવા" data-hi="हमारी सेवा" data-en="Our Service">અમારી સેવા</h2>
+<p data-gu="લગ્ન માટે યોગ્ય બાયોડેટા અને જીવનસાથી શોધવામાં મદદ. રજિસ્ટ્રેશન પહેલાં નિયમો ધ્યાનથી વાંચો." data-hi="विवाह के लिए उपयुक्त बायोडाटा और जीवनसाथी खोजने में सहायता। रजिस्ट्रेशन से पहले नियम पढ़ें।" data-en="We help you explore matrimonial biodata and find a life partner. Read the terms before registering.">લગ્ન માટે યોગ્ય બાયોડેટા અને જીવનસાથી શોધવામાં મદદ. રજિસ્ટ્રેશન પહેલાં નિયમો ધ્યાનથી વાંચો.</p>
+<div class="tiles">
+<div class="tile">💍 <span data-gu="લગ્ન બાયોડેટા" data-hi="विवाह बायोडाटा" data-en="Matrimonial biodata">લગ્ન બાયોડેટા</span></div>
+<div class="tile">🔎 <span data-gu="પ્રોફાઇલ શોધ" data-hi="प्रोफाइल खोज" data-en="Profile search">પ્રોફાઇલ શોધ</span></div>
+<div class="tile">🧾 <span data-gu="રજિસ્ટ્રેશન" data-hi="रजिस्ट्रेशन" data-en="Registration">રજિસ્ટ્રેશન</span></div>
+<div class="tile">🔐 <span data-gu="સુરક્ષિત પ્રક્રિયા" data-hi="सुरक्षित प्रक्रिया" data-en="Safer process">સુરક્ષિત પ્રક્રિયા</span></div>
+</div>
 </section>
 
 <section class="card">
 <h2 data-gu="રજિસ્ટ્રેશન ફી" data-hi="रजिस्ट्रेशन शुल्क" data-en="Registration Fee">રજિસ્ટ્રેશન ફી</h2>
-<div class="price">₹999</div>
-<p style="text-align:center" data-gu="મેમ્બરશિપની માન્યતા: 1 વર્ષ" data-hi="सदस्यता की वैधता: 1 वर्ष" data-en="Membership validity: 1 year">મેમ્બરશિપની માન્યતા: 1 વર્ષ</p>
+<div class="fee">₹999</div>
+<div class="muted" data-gu="સભ્યપદની માન્યતા: 1 વર્ષ" data-hi="सदस्यता की वैधता: 1 वर्ष" data-en="Membership validity: 1 year">સભ્યપદની માન્યતા: 1 વર્ષ</div>
+<a class="btn" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" rel="noopener" data-gu="રજિસ્ટ્રેશન ફોર્મ ખોલો" data-hi="रजिस्ट्रेशन फॉर्म खोलें" data-en="Open registration form">રજિસ્ટ્રેશન ફોર્મ ખોલો</a>
 </section>
 
 <section class="card">
-<h2 data-gu="નિયમો અને શરતો" data-hi="नियम और शर्तें" data-en="Rules and Terms">નિયમો અને શરતો</h2>
+<h2 data-gu="પગલું 1: રજિસ્ટ્રેશન કરો" data-hi="चरण 1: रजिस्ट्रेशन करें" data-en="Step 1: Register">પગલું 1: રજિસ્ટ્રેશન કરો</h2>
+<p data-gu="તમારી સાચી અને સંપૂર્ણ માહિતી ભરીને ફોર્મ સબમિટ કરો." data-hi="अपनी सही और पूरी जानकारी भरकर फॉर्म सबमिट करें।" data-en="Enter accurate details and submit the form.">તમારી સાચી અને સંપૂર્ણ માહિતી ભરીને ફોર્મ સબમિટ કરો.</p>
+<a class="btn" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" rel="noopener" data-gu="રજિસ્ટ્રેશન ફોર્મ ખોલો" data-hi="रजिस्ट्रेशन फॉर्म खोलें" data-en="Open registration form">રજિસ્ટ્રેશન ફોર્મ ખોલો</a>
+</section>
+
+<section class="card">
+<h2 data-gu="પગલું 2: ₹999 પેમેન્ટ" data-hi="चरण 2: ₹999 भुगतान" data-en="Step 2: Pay ₹999">પગલું 2: ₹999 પેમેન્ટ</h2>
+<p data-gu="પેમેન્ટ કરતાં પહેલાં QR કોડ પર Chamunda Marriage Beuro નામની ખાતરી કરો." data-hi="भुगतान से पहले QR कोड पर Chamunda Marriage Beuro नाम की पुष्टि करें।" data-en="Before paying, verify the QR code shows Chamunda Marriage Beuro.">પેમેન્ટ કરતાં પહેલાં QR કોડ પર Chamunda Marriage Beuro નામની ખાતરી કરો.</p>
+<img class="qr" src="IMG_20261007_165742.jpg" alt="Chamunda Marriage Beuro payment QR">
+<div class="upi">UPI ID: prakashchauhan7188-3@oksbi</div>
+<button class="btn green" id="copy" type="button" data-gu="UPI ID કોપી કરો" data-hi="UPI ID कॉपी करें" data-en="Copy UPI ID">UPI ID કોપી કરો</button>
+<div class="note" data-gu="નામની ખાતરી કર્યા પછી જ ચુકવણી કરો." data-hi="नाम की पुष्टि करने के बाद ही भुगतान करें।" data-en="Pay only after verifying the payee name.">નામની ખાતરી કર્યા પછી જ ચુકવણી કરો.</div>
+</section>
+
+<section class="card">
+<h2 data-gu="પગલું 3: UTR નંબર સબમિટ કરો" data-hi="चरण 3: UTR नंबर जमा करें" data-en="Step 3: Submit UTR">પગલું 3: UTR નંબર સબમિટ કરો</h2>
+<p data-gu="પેમેન્ટ પછી UTR નંબર અને જરૂરી વિગતો ભરો. UTR મોકલવાથી પેમેન્ટ આપમેળે ચકાસાતું નથી; તપાસ પછી જ સભ્યપદની પુષ્ટિ થશે." data-hi="भुगतान के बाद UTR और जरूरी जानकारी भरें। UTR भेजने से भुगतान अपने-आप सत्यापित नहीं होता; जाँच के बाद सदस्यता की पुष्टि होगी।" data-en="Submit your UTR after payment. Payment is not automatically verified; membership is confirmed after review.">પેમેન્ટ પછી UTR નંબર અને જરૂરી વિગતો ભરો. UTR મોકલવાથી પેમેન્ટ આપમેળે ચકાસાતું નથી; તપાસ પછી જ સભ્યપદની પુષ્ટિ થશે.</p>
+<a class="btn" href="https://forms.gle/RJc8Wtty7HJyaymU9" target="_blank" rel="noopener" data-gu="UTR નંબર સબમિટ કરો" data-hi="UTR नंबर जमा करें" data-en="Submit UTR">UTR નંબર સબમિટ કરો</a>
+<p class="muted" data-gu="પેમેન્ટની તપાસ પછી ટીમ 24 કલાકની અંદર WhatsApp દ્વારા સંપર્ક કરવાનો પ્રયત્ન કરશે." data-hi="भुगतान जाँच के बाद टीम 24 घंटे में WhatsApp से संपर्क करने का प्रयास करेगी।" data-en="After payment review, the team will try to contact you on WhatsApp within 24 hours.">પેમેન્ટની તપાસ પછી ટીમ 24 કલાકની અંદર WhatsApp દ્વારા સંપર્ક કરવાનો પ્રયત્ન કરશે.</p>
+</section>
+
+<section class="card">
+<h2 data-gu="નિયમો અને શરતો" data-hi="नियम और शर्तें" data-en="Terms and Conditions">નિયમો અને શરતો</h2>
 <ol>
-<li data-gu="રજિસ્ટ્રેશન પહેલાં તમામ નિયમો વાંચો." data-hi="रजिस्ट्रेशन से पहले सभी नियम पढ़ें." data-en="Read all rules before registering.">રજિસ્ટ્રેશન પહેલાં તમામ નિયમો વાંચો.</li>
-<li data-gu="ફી ₹999 છે અને મેમ્બરશિપ 1 વર્ષ માટે છે." data-hi="शुल्क ₹999 है और सदस्यता 1 वर्ष के लिए है." data-en="The fee is ₹999 for one year of membership.">ફી ₹999 છે અને મેમ્બરશિપ 1 વર્ષ માટે છે.</li>
-<li data-gu="ફોર્મમાં સાચી અને સંપૂર્ણ માહિતી આપો." data-hi="फॉर्म में सही और पूरी जानकारी दें." data-en="Provide accurate and complete information.">ફોર્મમાં સાચી અને સંપૂર્ણ માહિતી આપો.</li>
-<li data-gu="પેમેન્ટ પહેલાં UPI પર Chamunda Marriage Beuro નામની ખાતરી કરો." data-hi="भुगतान से पहले UPI पर Chamunda Marriage Beuro नाम की पुष्टि करें." data-en="Before paying, confirm the UPI name is Chamunda Marriage Beuro.">પેમેન્ટ પહેલાં UPI પર Chamunda Marriage Beuro નામની ખાતરી કરો.</li>
-<li data-gu="પેમેન્ટ પછી UTR નંબર અને રસીદ સાચવી રાખો." data-hi="भुगतान के बाद UTR नंबर और रसीद सुरक्षित रखें." data-en="Keep the UTR number and receipt after payment.">પેમેન્ટ પછી UTR નંબર અને રસીદ સાચવી રાખો.</li>
-<li data-gu="UTR મોકલવાથી પેમેન્ટ આપમેળે ચકાસાતું નથી. પેમેન્ટની તપાસ થયા પછી જ મેમ્બરશિપની પુષ્ટિ થશે." data-hi="UTR भेजने से भुगतान अपने-आप सत्यापित नहीं होता। भुगतान जाँच के बाद ही सदस्यता की पुष्टि होगी." data-en="Submitting a UTR does not automatically verify payment. Membership is confirmed only after payment review.">UTR મોકલવાથી પેમેન્ટ આપમેળે ચકાસાતું નથી. પેમેન્ટની તપાસ થયા પછી જ મેમ્બરશિપની પુષ્ટિ થશે.</li>
-<li data-gu="યોગ્ય પ્રોફાઇલ મળવાની કે લગ્ન નક્કી થવાની ખાતરી નથી." data-hi="उपयुक्त प्रोफाइल मिलने या विवाह तय होने की गारंटी नहीं है." data-en="A suitable match or marriage is not guaranteed.">યોગ્ય પ્રોફાઇલ મળવાની કે લગ્ન નક્કી થવાની ખાતરી નથી.</li>
-<li data-gu="રિફંડ માટે જાહેર કરેલી રિફંડ નીતિ લાગુ પડશે." data-hi="रिफंड के लिए घोषित रिफंड नीति लागू होगी." data-en="The published refund policy applies.">રિફંડ માટે જાહેર કરેલી રિફંડ નીતિ લાગુ પડશે.</li>
+<li data-gu="રજિસ્ટ્રેશન પહેલાં નિયમો વાંચો." data-hi="रजिस्ट्रेशन से पहले नियम पढ़ें।" data-en="Read the terms before registering.">રજિસ્ટ્રેશન પહેલાં નિયમો વાંચો.</li>
+<li data-gu="ફી ₹999 અને સભ્યપદ 1 વર્ષ માટે છે." data-hi="शुल्क ₹999 और सदस्यता 1 वर्ष के लिए है।" data-en="The fee is ₹999 for one year.">ફી ₹999 અને સભ્યપદ 1 વર્ષ માટે છે.</li>
+<li data-gu="ફોર્મમાં સાચી માહિતી આપો." data-hi="फॉर्म में सही जानकारी दें।" data-en="Provide accurate information.">ફોર્મમાં સાચી માહિતી આપો.</li>
+<li data-gu="યોગ્ય પ્રોફાઇલ મળવાની કે લગ્ન નક્કી થવાની ખાતરી નથી." data-hi="उपयुक्त प्रोफाइल या विवाह तय होने की गारंटी नहीं है।" data-en="A suitable match or marriage is not guaranteed.">યોગ્ય પ્રોફાઇલ મળવાની કે લગ્ન નક્કી થવાની ખાતરી નથી.</li>
+<li data-gu="રિફંડ માટે જાહેર કરેલી રિફંડ નીતિ લાગુ પડશે." data-hi="रिफंड के लिए प्रकाशित नीति लागू होगी।" data-en="The published refund policy applies.">રિફંડ માટે જાહેર કરેલી રિફંડ નીતિ લાગુ પડશે.</li>
 </ol>
-<p class="note" data-gu="નિયમો મંજૂર હોય તો જ આગળ વધો." data-hi="नियम स्वीकार हों तभी आगे बढ़ें." data-en="Proceed only if you agree to the rules.">નિયમો મંજૂર હોય તો જ આગળ વધો.</p>
-</section>
-
-<section class="card">
-<h2 data-gu="પગલું 1: રજિસ્ટ્રેશન ફોર્મ" data-hi="चरण 1: रजिस्ट्रेशन फॉर्म" data-en="Step 1: Registration Form">પગલું 1: રજિસ્ટ્રેશન ફોર્મ</h2>
-<p data-gu="તમારી માહિતી ભરીને ફોર્મ સબમિટ કરો." data-hi="अपनी जानकारी भरकर फॉर्म सबमिट करें." data-en="Fill in your details and submit the form.">તમારી માહિતી ભરીને ફોર્મ સબમિટ કરો.</p>
-<a class="btn" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" rel="noopener" data-gu="રજિસ્ટ્રેશન ફોર્મ ખોલો" data-hi="रजिस्ट्रेशन फॉर्म खोलें" data-en="Open Registration Form">રજિસ્ટ્રેશન ફોર્મ ખોલો</a>
-</section>
-
-<section class="card">
-<h2 data-gu="પગલું 2: ₹999 પેમેન્ટ" data-hi="चरण 2: ₹999 भुगतान" data-en="Step 2: ₹999 Payment">પગલું 2: ₹999 પેમેન્ટ</h2>
-<p data-gu="રજિસ્ટ્રેશન ફોર્મ સબમિટ કર્યા પછી પેમેન્ટ કરો. પેમેન્ટ પહેલાં નામની ખાતરી કરો."
-data-hi="रजिस्ट्रेशन फॉर्म जमा करने के बाद भुगतान करें। पहले नाम की पुष्टि करें."
-data-en="Pay after submitting the registration form. Confirm the name before paying.">રજિસ્ટ્રેશન ફોર્મ સબમિટ કર્યા પછી પેમેન્ટ કરો. પેમેન્ટ પહેલાં નામની ખાતરી કરો.</p>
-<img class="qr" src="IMG_20261007_165742.jpg" alt="Payment QR code" onerror="this.style.display='none';document.getElementById('qrError').style.display='block'">
-<p id="qrError" class="note" style="display:none">QR દેખાતો નથી. GitHubમાં IMG_20261007_165742.jpg ફાઇલ તપાસો.</p>
-<p><strong>UPI ID:</strong></p>
-<p id="upi" style="overflow-wrap:anywhere;font-weight:bold">prakashchauhan7188-3@oksbi</p>
-<button class="btn green" type="button" onclick="copyUPI()" data-gu="UPI ID કોપી કરો" data-hi="UPI ID कॉपी करें" data-en="Copy UPI ID">UPI ID કોપી કરો</button>
-<p id="copyMessage" aria-live="polite"></p>
-<p class="note" data-gu="પેમેન્ટ પહેલાં સ્ક્રીન પર Chamunda Marriage Beuro નામની ખાતરી કર્યા પછી જ ચૂકવણી કરો." data-hi="भुगतान से पहले स्क्रीन पर Chamunda Marriage Beuro नाम की पुष्टि करें." data-en="Pay only after confirming Chamunda Marriage Beuro on the payment screen.">પેમેન્ટ પહેલાં સ્ક્રીન પર Chamunda Marriage Beuro નામની ખાતરી કર્યા પછી જ ચૂકવણી કરો.</p>
-</section>
-
-<section class="card">
-<h2 data-gu="પગલું 3: UTR નંબર સબમિટ કરો" data-hi="चरण 3: UTR नंबर जमा करें" data-en="Step 3: Submit UTR Number">પગલું 3: UTR નંબર સબમિટ કરો</h2>
-<p data-gu="પેમેન્ટ પછી UTR નંબર અને રસીદ સાથે નીચેનું ફોર્મ ભરો. પેમેન્ટની તપાસ થયા પછી જ મેમ્બરશિપની પુષ્ટિ થશે."
-data-hi="भुगतान के बाद UTR नंबर और रसीद के साथ नीचे दिया फॉर्म भरें। भुगतान जाँच के बाद ही सदस्यता की पुष्टि होगी."
-data-en="After payment, complete the form below with your UTR number and receipt. Membership is confirmed after payment review.">પેમેન્ટ પછી UTR નંબર અને રસીદ સાથે નીચેનું ફોર્મ ભરો. પેમેન્ટની તપાસ થયા પછી જ મેમ્બરશિપની પુષ્ટિ થશે.</p>
-<a class="btn" href="https://forms.gle/RJc8Wtty7HJyaymU9" target="_blank" rel="noopener" data-gu="UTR નંબર સબમિટ કરો" data-hi="UTR नंबर जमा करें" data-en="Submit UTR Number">UTR નંબર સબમિટ કરો</a>
-<p data-gu="પેમેન્ટની તપાસ થયા પછી ટીમ 24 કલાકની અંદર WhatsApp દ્વારા સંપર્ક કરવાનો પ્રયત્ન કરશે." data-hi="भुगतान जाँच के बाद टीम 24 घंटे के भीतर WhatsApp पर संपर्क करने का प्रयास करेगी." data-en="After payment review, the team will try to contact you on WhatsApp within 24 hours.">પેમેન્ટની તપાસ થયા પછી ટીમ 24 કલાકની અંદર WhatsApp દ્વારા સંપર્ક કરવાનો પ્રયત્ન કરશે.</p>
+<div class="note" data-gu="નિયમો મંજૂર હોય તો જ આગળ વધો." data-hi="नियम स्वीकार हों तभी आगे बढ़ें।" data-en="Proceed only if you agree to the terms.">નિયમો મંજૂર હોય તો જ આગળ વધો.</div>
 </section>
 </main>
 
 <footer>
 <strong>Chamunda Marriage Beuro</strong>
-<p data-gu="સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે પેમેન્ટ કરો" data-hi="सही जानकारी दें • नियम पढ़ें • सुरक्षित भुगतान करें" data-en="Provide accurate details • Read the rules • Pay safely">સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે પેમેન્ટ કરો</p>
+<p>સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે આગળ વધો</p>
 </footer>
 
 <script>
-function setLanguage(lang){
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-"+lang+"]").forEach(function(el){
-el.textContent=el.getAttribute("data-"+lang);
+const sel=document.getElementById('lang');
+sel.addEventListener('change',()=>{
+const l=sel.value;
+document.documentElement.lang=l;
+document.querySelectorAll('[data-'+l+']').forEach(e=>{
+e.textContent=e.getAttribute('data-'+l);
 });
-}
-function copyUPI(){
-var upi=document.getElementById("upi").textContent.trim();
-if(navigator.clipboard&&navigator.clipboard.writeText){
-navigator.clipboard.writeText(upi).then(function(){
-document.getElementById("copyMessage").textContent="UPI ID copied";
-}).catch(function(){
-document.getElementById("copyMessage").textContent=upi;
 });
-}else{
-document.getElementById("copyMessage").textContent=upi;
+document.getElementById('copy').addEventListener('click',async()=>{
+const id='prakashchauhan7188-3@oksbi';
+try{
+await navigator.clipboard.writeText(id);
+document.getElementById('copy').textContent='કોપી થઈ ગયું';
+}catch(e){
+prompt('UPI ID કોપી કરો:',id);
 }
-}
+});
 </script>
 </body>
 </html>

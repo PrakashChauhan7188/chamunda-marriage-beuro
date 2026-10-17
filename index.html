@@ -196,7 +196,26 @@ const registrationURL = 'https://forms.gle/7gsYUcPXXaidVuYV7';
 ફોટા અને વિગતો પ્રકાશિત કરતાં પહેલાં સભ્યની સંમતિ મેળવો.
 */
 
-const profiles = [];
+
+const profiles = [
+  {
+    id: "CB-001",
+    name: "સભ્યનું નામ",
+    age: 25,
+    education: "B.Com",
+    city: "અમદાવાદ",
+    photo: "profile001.jpg"
+  },
+  {
+    id: "CB-002",
+    name: "બીજા સભ્યનું નામ",
+    age: 27,
+    education: "B.A.",
+    city: "રાજકોટ",
+    photo: "profile002.jpg"
+  }
+];
+ 
 
 const langSelect = document.getElementById('lang');
 langSelect.addEventListener('change', () => {

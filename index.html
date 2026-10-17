@@ -26,10 +26,20 @@ p{font-size:17px}
 .note{background:#fff1d2;border-radius:14px;padding:14px;margin-top:14px}
 .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .tile{padding:12px;text-align:center;background:#fff5f8;border:1px solid #f0dfe5;border-radius:14px;color:#741238;font-weight:bold}
+.profiles{display:grid;grid-template-columns:1fr;gap:14px}
+.profile{border:1px solid #f0dfe5;border-radius:16px;padding:16px;background:#fffafb}
+.profile h3{margin:0;color:#741238;font-size:20px}
+.profile p{margin:6px 0;font-size:15px}
+.profile .btn{font-size:15px;padding:11px}
+.tag{display:inline-block;background:#fff1d2;color:#741238;padding:3px 9px;border-radius:20px;font-size:12px}
 li{margin:10px 0}
 footer{text-align:center;background:#570b2b;color:white;padding:24px 12px}
 footer p{font-size:14px;color:#ffe8ef}
-@media(min-width:600px){main{padding:24px}.card{padding:28px}.tiles{grid-template-columns:repeat(4,1fr)}}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:10;padding:18px;align-items:center;justify-content:center}
+.modal-box{background:white;padding:24px;border-radius:20px;width:100%;max-width:420px;max-height:90vh;overflow:auto}
+.modal-box h2{margin-bottom:8px}
+.close{background:#eee;color:#34232a}
+@media(min-width:600px){main{padding:24px}.card{padding:28px}.tiles{grid-template-columns:repeat(4,1fr)}.profiles{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -37,8 +47,8 @@ footer p{font-size:14px;color:#ffe8ef}
 <header>
 <div class="logo">💍</div>
 <h1>Chamunda<br>Marriage Beuro</h1>
-<p>લગ્ન માટે યોગ્ય જીવનસાથીની શોધમાં સહાય</p>
-<label for="lang">ભાષા પસંદ કરો</label><br>
+<p data-gu="લગ્ન માટે યોગ્ય જીવનસાથીની શોધમાં સહાય" data-hi="जीवनसाथी खोजने में सहायता" data-en="Helping you find a suitable life partner">લગ્ન માટે યોગ્ય જીવનસાથીની શોધમાં સહાય</p>
+<label for="lang" data-gu="ભાષા પસંદ કરો" data-hi="भाषा चुनें" data-en="Choose language">ભાષા પસંદ કરો</label><br>
 <select id="lang">
 <option value="gu">ગુજરાતી</option>
 <option value="hi">हिन्दी</option>
@@ -57,6 +67,52 @@ footer p{font-size:14px;color:#ffe8ef}
 <div class="tile">🔐 <span data-gu="સુરક્ષિત પ્રક્રિયા" data-hi="सुरक्षित प्रक्रिया" data-en="Safer process">સુરક્ષિત પ્રક્રિયા</span></div>
 </div>
 </section>
+
+<!-- Biodata section -->
+<section class="card" id="biodata">
+<h2 data-gu="લગ્ન માટે બાયોડેટા" data-hi="विवाह के बायोडाटा" data-en="Matrimonial Biodata">લગ્ન માટે બાયોડેટા</h2>
+<p data-gu="નીચે ફક્ત ડેમો પ્રોફાઇલ બતાવેલી છે. આ વાસ્તવિક લગ્ન પ્રસ્તાવો નથી." data-hi="नीचे केवल डेमो प्रोफाइल हैं। ये वास्तविक विवाह प्रस्ताव नहीं हैं।" data-en="The profiles below are examples only, not real marriage proposals.">નીચે ફક્ત ડેમો પ્રોફાઇલ બતાવેલી છે. આ વાસ્તવિક લગ્ન પ્રસ્તાવો નથી.</p>
+
+<div class="profiles">
+<article class="profile">
+<span class="tag">Demo</span>
+<h3>પ્રોફાઇલ CB-001</h3>
+<p><b data-gu="ઉંમર:" data-hi="उम्र:" data-en="Age:">ઉંમર:</b> 26 વર્ષ</p>
+<p><b data-gu="શિક્ષણ:" data-hi="शिक्षा:" data-en="Education:">શિક્ષણ:</b> B.Com</p>
+<p><b data-gu="શહેર:" data-hi="शहर:" data-en="City:">શહેર:</b> અમદાવાદ</p>
+<button class="btn more" data-gu="વધુ માહિતી" data-hi="अधिक जानकारी" data-en="More details" data-profile="CB-001">વધુ માહિતી</button>
+</article>
+
+<article class="profile">
+<span class="tag">Demo</span>
+<h3>પ્રોફાઇલ CB-002</h3>
+<p><b data-gu="ઉંમર:" data-hi="उम्र:" data-en="Age:">ઉંમર:</b> 28 વર્ષ</p>
+<p><b data-gu="શિક્ષણ:" data-hi="शिक्षा:" data-en="Education:">શિક્ષણ:</b> B.A.</p>
+<p><b data-gu="શહેર:" data-hi="शहर:" data-en="City:">શહેર:</b> રાજકોટ</p>
+<button class="btn more" data-gu="વધુ માહિતી" data-hi="अधिक जानकारी" data-en="More details" data-profile="CB-002">વધુ માહિતી</button>
+</article>
+
+<article class="profile">
+<span class="tag">Demo</span>
+<h3>પ્રોફાઇલ CB-003</h3>
+<p><b data-gu="ઉંમર:" data-hi="उम्र:" data-en="Age:">ઉંમર:</b> 25 વર્ષ</p>
+<p><b data-gu="શિક્ષણ:" data-hi="शिक्षा:" data-en="Education:">શિક્ષણ:</b> B.Sc.</p>
+<p><b data-gu="શહેર:" data-hi="शहर:" data-en="City:">શહેર:</b> ભુજ</p>
+<button class="btn more" data-gu="વધુ માહિતી" data-hi="अधिक जानकारी" data-en="More details" data-profile="CB-003">વધુ માહિતી</button>
+</article>
+</div>
+<div class="note" data-gu="વાસ્તવિક સભ્યોના બાયોડેટા તેમની સંમતિથી જ ઉમેરવા." data-hi="वास्तविक सदस्यों के बायोडाटा उनकी सहमति से ही जोड़ें।" data-en="Add real member profiles only with their consent.">વાસ્તવિક સભ્યોના બાયોડેટા તેમની સંમતિથી જ ઉમેરવા.</div>
+</section>
+
+<!-- Registration prompt modal -->
+<div class="modal" id="regModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-box">
+<h2 id="modalTitle" data-gu="વધુ માહિતી માટે રજિસ્ટ્રેશન જરૂરી" data-hi="अधिक जानकारी के लिए रजिस्ट्रेशन जरूरी" data-en="Registration required for more details">વધુ માહિતી માટે રજિસ્ટ્રેશન જરૂરી</h2>
+<p id="modalText" data-gu="સંપૂર્ણ માહિતી મેળવવા પહેલાં રજિસ્ટ્રેશન ફોર્મ ભરો. સભ્યપદની ચકાસણી અલગથી કરવામાં આવશે." data-hi="पूरी जानकारी पाने से पहले रजिस्ट्रेशन फॉर्म भरें। सदस्यता अलग से सत्यापित की जाएगी।" data-en="Please complete the registration form to request full details. Membership is verified separately.">સંપૂર્ણ માહિતી મેળવવા પહેલાં રજિસ્ટ્રેશન ફોર્મ ભરો. સભ્યપદની ચકાસણી અલગથી કરવામાં આવશે.</p>
+<a class="btn" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" rel="noopener" data-gu="રજિસ્ટ્રેશન ફોર્મ ખોલો" data-hi="रजिस्ट्रेशन फॉर्म खोलें" data-en="Open registration form">રજિસ્ટ્રેશન ફોર્મ ખોલો</a>
+<button class="btn close" id="closeModal" type="button" data-gu="બંધ કરો" data-hi="बंद करें" data-en="Close">બંધ કરો</button>
+</div>
+</div>
 
 <section class="card">
 <h2 data-gu="પગલું 1: રજિસ્ટ્રેશન કરો" data-hi="चरण 1: रजिस्ट्रेशन करें" data-en="Step 1: Register">પગલું 1: રજિસ્ટ્રેશન કરો</h2>
@@ -95,26 +151,54 @@ footer p{font-size:14px;color:#ffe8ef}
 
 <footer>
 <strong>Chamunda Marriage Beuro</strong>
-<p>સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે આગળ વધો</p>
+<p data-gu="સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે આગળ વધો" data-hi="सही जानकारी दें • नियम पढ़ें • सुरक्षित तरीके से आगे बढ़ें" data-en="Provide accurate information • Read the terms • Proceed safely">સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે આગળ વધો</p>
 </footer>
 
 <script>
 const sel=document.getElementById('lang');
+
 sel.addEventListener('change',()=>{
-const l=sel.value;
-document.documentElement.lang=l;
-document.querySelectorAll('[data-'+l+']').forEach(e=>{
-e.textContent=e.getAttribute('data-'+l);
+  const l=sel.value;
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-'+l+']').forEach(e=>{
+    e.textContent=e.getAttribute('data-'+l);
+  });
 });
+
+const modal=document.getElementById('regModal');
+
+document.querySelectorAll('.more').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const l=sel.value;
+    const profile=button.getAttribute('data-profile');
+    const text={
+      gu:profile+' માટે સંપૂર્ણ માહિતી મેળવવા પહેલાં રજિસ્ટ્રેશન ફોર્મ ભરો. સભ્યપદની ચકાસણી અલગથી કરવામાં આવશે.',
+      hi:profile+' की पूरी जानकारी पाने से पहले रजिस्ट्रेशन फॉर्म भरें। सदस्यता अलग से सत्यापित की जाएगी।',
+      en:'Complete the registration form to request full details for '+profile+'. Membership is verified separately.'
+    };
+    document.getElementById('modalText').textContent=text[l];
+    modal.style.display='flex';
+  });
 });
+
+document.getElementById('closeModal').addEventListener('click',()=>{
+  modal.style.display='none';
+});
+
+modal.addEventListener('click',e=>{
+  if(e.target===modal) modal.style.display='none';
+});
+
 document.getElementById('copy').addEventListener('click',async()=>{
-const id='prakashchauhan7188-3@oksbi';
-try{
-await navigator.clipboard.writeText(id);
-document.getElementById('copy').textContent='કોપી થઈ ગયું';
-}catch(e){
-prompt('UPI ID કોપી કરો:',id);
-}
+  const id='prakashchauhan7188-3@oksbi';
+  const button=document.getElementById('copy');
+  try{
+    await navigator.clipboard.writeText(id);
+    button.textContent=sel.value==='hi'?'कॉपी हो गया':
+      sel.value==='en'?'Copied':'કોપી થઈ ગયું';
+  }catch(e){
+    prompt('UPI ID કોપી કરો:',id);
+  }
 });
 </script>
 </body>

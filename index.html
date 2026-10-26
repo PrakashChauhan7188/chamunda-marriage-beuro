@@ -1,51 +1,135 @@
+
 <!DOCTYPE html>
 <html lang="gu">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>લગ્ન બાયોડેટા</title>
+<meta name="theme-color" content="#741238">
+<title>Chamunda Marriage Beuro</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;padding:12px;background:#fff8ef;color:#3b2430;font-family:Arial,sans-serif}
-h1{text-align:center;color:#741238}
-.grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:650px;margin:auto}
-.card{background:#fff;border:1px solid #e8d6df;border-radius:16px;padding:14px;overflow:hidden}
-.card img{width:100%;height:auto;display:block;object-fit:contain;border-radius:10px}
-h2{color:#741238;margin:12px 0}
-p{margin:7px 0;overflow-wrap:anywhere}
+body{margin:0;font-family:Arial,sans-serif;background:#fff8ef;color:#34232a;line-height:1.6}
+header{background:linear-gradient(135deg,#570b2b,#a52d5c);color:#fff;text-align:center;padding:25px 12px;border-bottom:4px solid #e1bd70}
+header h1{margin:0;font-size:29px}
+header p{color:#ffebc6}
+main{max-width:850px;margin:auto;padding:12px}
+.card{background:#fff;border:1px solid #ead6df;border-radius:18px;padding:17px;margin:16px 0;box-shadow:0 5px 18px #520c2510}
+h2,h3{color:#741238}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{background:#fff1f6;padding:14px;text-align:center;border-radius:12px;color:#741238;font-weight:bold}
+input,select{width:100%;padding:12px;border:1px solid #ead8df;border-radius:10px;font-size:16px;margin:6px 0}
+.btn{display:block;background:#741238;color:white;text-decoration:none;text-align:center;padding:13px;border-radius:10px;margin:10px 0;font-weight:bold;border:0;width:100%;font-size:16px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+.profile{background:#fffafd;border:1px solid #ead4dc;border-radius:14px;padding:12px;min-width:0}
+.profile img{display:block;width:100%;height:auto;object-fit:contain;border-radius:10px}
+.profile h3{font-size:23px;margin:12px 0}
+.profile p{margin:7px 0;overflow-wrap:anywhere}
+.tag{display:inline-block;background:#f7e7ed;color:#741238;border-radius:18px;padding:4px 9px;font-size:13px;margin-top:8px}
+footer{background:#570b2b;color:#fff;text-align:center;padding:20px}
+@media(min-width:650px){main{padding:20px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
-<h1>લગ્ન બાયોડેટા</h1>
-<div class="grid" id="profiles"></div>
+
+<header>
+  <div style="font-size:38px">💍</div>
+  <h1>Chamunda Marriage Beuro</h1>
+  <p>લગ્ન માટે યોગ્ય જીવનસાથીની શોધ</p>
+</header>
+
+<main>
+
+<section class="card">
+  <h2>અમારી સેવા</h2>
+  <p>લગ્ન માટે બાયોડેટા રજિસ્ટ્રેશન અને યોગ્ય જીવનસાથીની શોધમાં સહાય.</p>
+  <div class="tiles">
+    <div class="tile">💍 લગ્ન બાયોડેટા</div>
+    <div class="tile">🔎 બાયોડેટા શોધ</div>
+    <div class="tile">📝 રજિસ્ટ્રેશન</div>
+    <div class="tile">🔐 સુરક્ષિત પ્રક્રિયા</div>
+  </div>
+</section>
+
+<section class="card" id="biodata">
+  <h2>લગ્ન બાયોડેટા</h2>
+  <input id="search" placeholder="નામ, ID, શહેર અથવા અભ્યાસ શોધો">
+  <div class="grid" id="profiles"></div>
+</section>
+
+<section class="card" id="registration">
+  <h2>રજિસ્ટ્રેશન</h2>
+  <p>રજિસ્ટ્રેશન ફોર્મ ભરીને તમારી સાચી માહિતી સબમિટ કરો.</p>
+  <a class="btn" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" rel="noopener">રજિસ્ટ્રેશન ફોર્મ ખોલો</a>
+</section>
+
+<section class="card" id="payment">
+  <h2>રજિસ્ટ્રેશન ફી: ₹999</h2>
+  <p><b>UPI ID:</b> prakashchauhan7188-3@oksbi</p>
+  <button class="btn" id="copy">UPI ID કોપી કરો</button>
+  <p>ચુકવણી કરતાં પહેલાં UPI વિગતો ચકાસો.</p>
+</section>
+
+<section class="card">
+  <h2>UTR નંબર સબમિટ કરો</h2>
+  <a class="btn" href="https://forms.gle/RJc8Wtty7HJyaymU9" target="_blank" rel="noopener">UTR ફોર્મ ખોલો</a>
+</section>
+
+<section class="card">
+  <h2>નિયમો અને શરતો</h2>
+  <p>રજિસ્ટ્રેશન ફી ₹999 છે અને સભ્યપદની માન્યતા એક વર્ષ છે.</p>
+  <p>તમારી માહિતી સાચી હોવી જરૂરી છે. યોગ્ય પ્રોફાઇલ કે લગ્નની ખાતરી આપવામાં આવતી નથી. ચુકવણી પહેલાં લાગુ પડતી રિફંડ નીતિ તપાસો.</p>
+</section>
+
+</main>
+
+<footer>
+  <b>Chamunda Marriage Beuro</b>
+</footer>
 
 <script>
 const biodata=[
- {name:"નેના ભોરા",age:"23 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.Sc.",job:"લેબ ટેક્નિશિયન",city:"વડોદરા, ગુજરાત",photo:"biodata1.jpg"},
- {name:"નિશા દેસાઈ",age:"24 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A.",job:"ખાનગી ઓફિસમાં નોકરી",city:"વડોદરા",photo:"biodata2.jpg"},
- {name:"કાવ્યા સોલંકી",age:"22 વર્ષ",height:"5 ફૂટ 1 ઇંચ",education:"ધોરણ 10 પાસ",job:"બ્યુટી પાર્લરમાં સહાયક",city:"જામનગર",photo:"biodata3.jpg"},
- {name:"પ્રિયા દાસ",age:"25 વર્ષ",height:"5 ફૂટ 1 ઇંચ",education:"B.Com.",job:"ટી-અસિસ્ટન્ટ",city:"દ્વારકા",photo:"biodata4.jpg"},
- {name:"હેતલ રાઠોડ",age:"23 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A.",job:"ખાનગી ઓફિસમાં નોકરી",city:"રાજકોટ",photo:"biodata5.jpg"},
- {name:"કાવ્યા પટેલ",age:"24 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.Com.",job:"પ્રાઇવેટ કંપનીમાં નોકરી",city:"અમદાવાદ",photo:"biodata6.jpg"},
- {name:"નંદિની ચૌહાણ",age:"25 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.A.",job:"પ્રાઇવેટ નોકરી",city:"વડોદરા",photo:"biodata7.jpg"},
- {name:"કાવ્યા રાઠોડ",age:"21 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A. (ચાલુ)",job:"અભ્યાસ સાથે પાર્ટ-ટાઇમ",city:"રાજકોટ",photo:"biodata8.jpg"},
- {name:"રીયા પટેલ",age:"22 વર્ષ",height:"5 ફૂટ 4 ઇંચ",education:"B.Com.",job:"પ્રાઇવેટ નોકરી",city:"રાજકોટ",photo:"biodata9.jpg"},
- {name:"રીમા પટેલ",age:"23 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"ધોરણ 12 પાસ",job:"ખાનગી નોકરી",city:"અમદાવાદ",photo:"biodata10.jpg"}
+{name:"નેના ભોરા",age:"23 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.Sc.",job:"લેબ ટેક્નિશિયન",city:"વડોદરા, ગુજરાત",photo:"biodata1.jpg"},
+{name:"નિશા દેસાઈ",age:"24 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A.",job:"ખાનગી ઓફિસમાં નોકરી",city:"વડોદરા",photo:"biodata2.jpg"},
+{name:"કાવ્યા સોલંકી",age:"22 વર્ષ",height:"5 ફૂટ 1 ઇંચ",education:"ધોરણ 10 પાસ",job:"બ્યુટી પાર્લરમાં સહાયક",city:"જામનગર",photo:"biodata3.jpg"},
+{name:"પ્રિયા દાસ",age:"25 વર્ષ",height:"5 ફૂટ 1 ઇંચ",education:"B.Com.",job:"ટી.એસ્ટેટ ઓફિસ આસિસ્ટન્ટ",city:"દ્વારકા",photo:"biodata4.jpg"},
+{name:"હેતલ રાઠોડ",age:"23 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A.",job:"ખાનગી ઓફિસમાં નોકરી",city:"રાજકોટ",photo:"biodata5.jpg"},
+{name:"કાવ્યા પટેલ",age:"24 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.Com.",job:"પ્રાઇવેટ કંપનીમાં નોકરી",city:"અમદાવાદ",photo:"biodata6.jpg"},
+{name:"નંદિની ચૌહાણ",age:"25 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.A.",job:"પ્રાઇવેટ નોકરી",city:"વડોદરા",photo:"biodata7.jpg"},
+{name:"કાવ્યા રાઠોડ",age:"21 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A. (ચાલુ)",job:"અભ્યાસ સાથે પાર્ટ-ટાઇમ",city:"રાજકોટ",photo:"biodata8.jpg"},
+{name:"રીયા પટેલ",age:"22 વર્ષ",height:"5 ફૂટ 4 ઇંચ",education:"B.Com.",job:"પ્રાઇવેટ નોકરી",city:"રાજકોટ",photo:"biodata9.jpg"},
+{name:"રીમા પટેલ",age:"23 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"ધોરણ 12 પાસ",job:"ખાનગી નોકરી",city:"અમદાવાદ",photo:"biodata10.jpg"}
 ];
 
-document.getElementById("profiles").innerHTML=biodata.map((p,i)=>`
- <article class="card">
-   <img src="${p.photo}" alt="${p.name}નો બાયોડેટા"
-        onerror="this.style.display='none'">
-   <h2>${p.name}</h2>
-   <p><b>બાયોડેટા ID:</b> CMB-${String(i+1).padStart(3,"0")}</p>
+function showProfiles(){
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const filtered=biodata.filter(p=>
+  [p.name,p.city,p.education,p.job].some(v=>v.toLowerCase().includes(q))
+ );
+ document.getElementById("profiles").innerHTML=filtered.map(p=>`
+  <article class="profile">
+   <img src="${p.photo}" alt="${p.name}" onerror="this.style.display='none'">
+   <span class="tag">લગ્ન બાયોડેટા</span>
+   <h3>${p.name}</h3>
    <p><b>ઉંમર:</b> ${p.age}</p>
    <p><b>ઊંચાઈ:</b> ${p.height}</p>
    <p><b>શિક્ષણ:</b> ${p.education}</p>
    <p><b>નોકરી / વ્યવસાય:</b> ${p.job}</p>
    <p><b>શહેર:</b> ${p.city}</p>
- </article>
-`).join("");
+  </article>
+ `).join("");
+}
+document.getElementById("search").addEventListener("input",showProfiles);
+showProfiles();
+
+document.getElementById("copy").addEventListener("click",async()=>{
+ const upi="prakashchauhan7188-3@oksbi";
+ try{
+  await navigator.clipboard.writeText(upi);
+  alert("UPI ID કોપી થયું");
+ }catch(e){
+  prompt("UPI ID કોપી કરો",upi);
+ }
+});
 </script>
 </body>
 </html>

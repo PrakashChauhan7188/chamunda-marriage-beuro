@@ -29,14 +29,21 @@ p{font-size:17px}
 footer{text-align:center;background:#570b2b;color:white;padding:24px 12px}
 footer p{font-size:14px;color:#ffe8ef}
 li{margin:10px 0}
-@media(min-width:600px){main{padding:24px}.card{padding:28px}.tiles{grid-template-columns:repeat(4,1fr)}}
+.profile-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+.profile{border:1px solid #ead4dc;border-radius:16px;padding:16px;background:#fffafd}
+.profile h3{margin:0 0 8px;color:#741238;font-size:21px}
+.profile-tag{display:inline-block;background:#f7e7ed;color:#741238;border-radius:20px;padding:4px 10px;font-size:13px;font-weight:bold;margin-bottom:8px}
+.profile dl{display:grid;grid-template-columns:110px 1fr;gap:5px 10px;margin:10px 0}
+.profile dt{font-weight:bold;color:#725e67}
+.profile dd{margin:0;overflow-wrap:anywhere}
+@media(min-width:600px){main{padding:24px}.card{padding:28px}.tiles{grid-template-columns:repeat(4,1fr)}.profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
 <header>
   <div class="logo">💍</div>
   <h1>Chamunda<br>Marriage Beuro</h1>
-  <p data-gu="લગ્ન માટે યોગ્ય જીવનસાથીની શોધમાં સહાય" data-hi="जीवनसाथी खोजने में सहायता" data-en="Helping you find a suitable life partner">લગ્ન માટે યોગ્ય જીવનસાથીની શોધમાં સહાય</p>
+  <p>લગ્ન માટે યોગ્ય જીવનસાથીની શોધમાં સહાય</p>
   <label for="lang">ભાષા પસંદ કરો</label><br>
   <select id="lang">
     <option value="gu">ગુજરાતી</option>
@@ -44,11 +51,10 @@ li{margin:10px 0}
     <option value="en">English</option>
   </select>
 </header>
-
 <main>
 <section class="card">
-  <h2 data-gu="અમારી સેવા" data-hi="हमारी सेवाएँ" data-en="Our Services">અમારી સેવા</h2>
-  <p data-gu="લગ્ન માટે યોગ્ય બાયોડેટા શોધવામાં મદદ. વધુ માહિતી માટે પહેલાં રજિસ્ટ્રેશન કરો." data-hi="विवाह के लिए उपयुक्त बायोडाटा खोजने में सहायता। अधिक जानकारी के लिए पहले रजिस्ट्रेशन करें।" data-en="Help finding matrimonial profiles. Register first to request more information.">લગ્ન માટે યોગ્ય બાયોડેટા શોધવામાં મદદ. વધુ માહિતી માટે પહેલાં રજિસ્ટ્રેશન કરો.</p>
+  <h2>અમારી સેવા</h2>
+  <p>લગ્ન માટે યોગ્ય બાયોડેટા શોધવામાં મદદ. વધુ માહિતી માટે પહેલાં રજિસ્ટ્રેશન કરો.</p>
   <div class="tiles">
     <div class="tile">💍 લગ્ન બાયોડેટા</div>
     <div class="tile">🔎 પ્રોફાઇલ શોધ</div>
@@ -58,20 +64,33 @@ li{margin:10px 0}
 </section>
 
 <section class="card" id="biodata">
-  <h2 data-gu="લગ્ન માટે બાયોડેટા" data-hi="विवाह के बायोडाटा" data-en="Matrimonial Profiles">લગ્ન માટે બાયોડેટા</h2>
-  <p data-gu="નવી પ્રોફાઇલ ઉમેરાયા પછી અહીં દેખાશે." data-hi="नई प्रोफाइल जोड़े जाने पर यहाँ दिखाई देगी।" data-en="Profiles will appear here when added.">નવી પ્રોફાઇલ ઉમેરાયા પછી અહીં દેખાશે.</p>
-  <p class="muted" data-gu="હાલમાં કોઈ બાયોડેટા ઉપલબ્ધ નથી." data-hi="फिलहाल कोई बायोडाटा उपलब्ध नहीं है।" data-en="No profiles are currently available.">હાલમાં કોઈ બાયોડેટા ઉપલબ્ધ નથી.</p>
+  <h2>લગ્ન માટે બાયોડેટા</h2>
+  <p>પ્રોફાઇલની માહિતી નીચે જુઓ. વધુ વિગતો માટે વ્યક્તિની સંમતિ અને રજિસ્ટ્રેશનની શરતો લાગુ પડે છે.</p>
+  <div class="profile-grid">
+    <article class="profile">
+      <span class="profile-tag">બાયોડેટા ID: CMB-001</span>
+      <h3>Divya Modi</h3>
+      <dl>
+        <dt>ઉંમર</dt><dd>27 વર્ષ</dd>
+        <dt>ઊંચાઈ</dt><dd>5.60 (માલિકે આપેલી નોંધ મુજબ)</dd>
+        <dt>અભ્યાસ</dt><dd>ધોરણ 7 પાસ</dd>
+        <dt>વ્યવસાય</dt><dd>ગૃહિણી</dd>
+        <dt>શહેર</dt><dd>પાટણ, ગુજરાત</dd>
+      </dl>
+      <p class="muted">ફોટો અને સંપર્ક વિગતો અહીં જાહેર કરેલ નથી.</p>
+    </article>
+  </div>
 </section>
 
 <section class="card">
-  <h2 data-gu="પગલું 1: રજિસ્ટ્રેશન કરો" data-hi="चरण 1: रजिस्ट्रेशन करें" data-en="Step 1: Register">પગલું 1: રજિસ્ટ્રેશન કરો</h2>
-  <p data-gu="તમારી સાચી અને સંપૂર્ણ માહિતી ભરીને ફોર્મ સબમિટ કરો." data-hi="अपनी सही और पूरी जानकारी भरकर फॉर्म सबमिट करें।" data-en="Enter accurate details and submit the form.">તમારી સાચી અને સંપૂર્ણ માહિતી ભરીને ફોર્મ સબમિટ કરો.</p>
+  <h2>પગલું 1: રજિસ્ટ્રેશન કરો</h2>
+  <p>તમારી સાચી અને સંપૂર્ણ માહિતી ભરીને ફોર્મ સબમિટ કરો.</p>
   <a class="btn" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" rel="noopener">રજિસ્ટ્રેશન ફોર્મ ખોલો</a>
 </section>
 
 <section class="card">
-  <h2 data-gu="પગલું 2: ₹999 પેમેન્ટ" data-hi="चरण 2: ₹999 भुगतान" data-en="Step 2: Pay ₹999">પગલું 2: ₹999 પેમેન્ટ</h2>
-  <p data-gu="પેમેન્ટ કરતાં પહેલાં QR કોડ પર Chamunda Marriage Beuro નામની ખાતરી કરો." data-hi="भुगतान से पहले QR कोड पर Chamunda Marriage Beuro नाम की पुष्टि करें।" data-en="Before paying, verify the QR code shows Chamunda Marriage Beuro.">પેમેન્ટ કરતાં પહેલાં QR કોડ પર Chamunda Marriage Beuro નામની ખાતરી કરો.</p>
+  <h2>પગલું 2: ₹999 પેમેન્ટ</h2>
+  <p>પેમેન્ટ કરતાં પહેલાં QR કોડ પર Chamunda Marriage Beuro નામની ખાતરી કરો.</p>
   <img class="qr" src="IMG_20261007_165742.jpg" alt="Chamunda Marriage Beuro payment QR">
   <div class="upi">UPI ID: prakashchauhan7188-3@oksbi</div>
   <button class="btn green" id="copy" type="button">UPI ID કોપી કરો</button>
@@ -79,14 +98,14 @@ li{margin:10px 0}
 </section>
 
 <section class="card">
-  <h2 data-gu="પગલું 3: UTR નંબર સબમિટ કરો" data-hi="चरण 3: UTR नंबर जमा करें" data-en="Step 3: Submit UTR">પગલું 3: UTR નંબર સબમિટ કરો</h2>
-  <p data-gu="પેમેન્ટ પછી UTR નંબર અને જરૂરી વિગતો ભરો. તપાસ પછી જ સભ્યપદની પુષ્ટિ થશે." data-hi="भुगतान के बाद UTR और जरूरी जानकारी भरें। जाँच के बाद ही सदस्यता की पुष्टि होगी।" data-en="Submit your UTR after payment. Membership is confirmed after review.">પેમેન્ટ પછી UTR નંબર અને જરૂરી વિગતો ભરો. તપાસ પછી જ સભ્યપદની પુષ્ટિ થશે.</p>
+  <h2>પગલું 3: UTR નંબર સબમિટ કરો</h2>
+  <p>પેમેન્ટ પછી UTR નંબર અને જરૂરી વિગતો ભરો. તપાસ પછી જ સભ્યપદની પુષ્ટિ થશે.</p>
   <a class="btn" href="https://forms.gle/RJc8Wtty7HJyaymU9" target="_blank" rel="noopener">UTR નંબર સબમિટ કરો</a>
-  <p class="muted">પેમેન્ટની તપાસ પછી ટીમ 24 કલાકની અંદર WhatsApp દ્વારા સંપર્ક કરવાનો પ્રયત્ન કરશે.</p>
+  <p class="muted">પેમેન્ટની તપાસ પછી ટીમ 24 કલાકની અંદર સંપર્ક કરવાનો પ્રયત્ન કરશે.</p>
 </section>
 
 <section class="card">
-  <h2 data-gu="નિયમો અને શરતો" data-hi="नियम और शर्तें" data-en="Terms and Conditions">નિયમો અને શરતો</h2>
+  <h2>નિયમો અને શરતો</h2>
   <ol>
     <li>રજિસ્ટ્રેશન પહેલાં નિયમો વાંચો.</li>
     <li>ફી ₹999 અને સભ્યપદ 1 વર્ષ માટે છે.</li>
@@ -96,27 +115,25 @@ li{margin:10px 0}
   </ol>
 </section>
 </main>
-
 <footer>
   <strong>Chamunda Marriage Beuro</strong>
   <p>સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે આગળ વધો</p>
 </footer>
-
 <script>
 document.getElementById('lang').addEventListener('change', function(){
-  const lang = this.value;
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-' + lang + ']').forEach(function(el){
-    el.textContent = el.getAttribute('data-' + lang);
-  });
+  const lang=this.value;
+  document.documentElement.lang=lang;
+  if(lang==='gu') location.reload();
+  if(lang==='hi') alert('हिन्दी अनुवाद अगली अपडेट में जोड़ा जाएगा।');
+  if(lang==='en') alert('English translation will be added in a future update.');
 });
 document.getElementById('copy').addEventListener('click', async function(){
-  const upi = 'prakashchauhan7188-3@oksbi';
-  try {
+  const upi='prakashchauhan7188-3@oksbi';
+  try{
     await navigator.clipboard.writeText(upi);
     alert('UPI ID કોપી થઈ ગયું');
-  } catch(e) {
-    prompt('UPI ID કોપી કરો:', upi);
+  }catch(e){
+    prompt('UPI ID કોપી કરો:',upi);
   }
 });
 </script>

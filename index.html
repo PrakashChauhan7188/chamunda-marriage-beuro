@@ -1,283 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="gu">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#741238">
-<title>Chamunda Marriage Beuro</title>
+<title>લગ્ન બાયોડેટા</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fff8ef;color:#34232a;line-height:1.6}
-header{background:linear-gradient(135deg,#570b2b,#a52d5c);color:white;text-align:center;padding:26px 14px;border-bottom:4px solid #e1bd70}
-h1{margin:0;font-size:30px}
-header p{color:#ffebc6}
-main{max-width:1100px;margin:auto;padding:14px}
-.card{background:#fff;border:1px solid #f0dfe5;border-radius:18px;padding:20px;margin:16px 0;box-shadow:0 8px 24px #520c2510}
-h2,h3{color:#741238}
-.tiles,.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.tile{background:#fff5f8;padding:12px;text-align:center;border-radius:12px;color:#741238;font-weight:bold}
-input,select{width:100%;padding:12px;border:1px solid #ead8df;border-radius:10px;font-size:16px;margin:5px 0}
-.btn{display:block;background:#741238;color:#fff;text-decoration:none;text-align:center;padding:13px;border-radius:12px;margin:10px 0;font-weight:bold;border:0;width:100%;cursor:pointer}
-.notice{background:#fff1d2;border:1px solid #e1bd70;border-radius:12px;padding:12px}
-.profile{background:#fffafd;border:1px solid #ead4dc;border-radius:14px;padding:12px;min-width:0}
-.profile img{width:100%;height:200px;object-fit:cover;border-radius:10px;background:#f7e7ed}
-.tag{display:inline-block;background:#f7e7ed;color:#741238;border-radius:18px;padding:4px 9px;font-size:12px}
-dl{display:grid;grid-template-columns:78px 1fr;gap:4px 8px;font-size:14px}
-dt{font-weight:bold;color:#725e67}
-dd{margin:0;overflow-wrap:anywhere}
-.muted,.count{font-size:13px;color:#725e67}
-footer{text-align:center;background:#570b2b;color:white;padding:20px}
-@media(min-width:700px){
- main{padding:22px}
- .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
- .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
-}
+body{margin:0;padding:12px;background:#fff8ef;color:#3b2430;font-family:Arial,sans-serif}
+h1{text-align:center;color:#741238}
+.grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:650px;margin:auto}
+.card{background:#fff;border:1px solid #e8d6df;border-radius:16px;padding:14px;overflow:hidden}
+.card img{width:100%;height:auto;display:block;object-fit:contain;border-radius:10px}
+h2{color:#741238;margin:12px 0}
+p{margin:7px 0;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
-
-<header>
-  <div style="font-size:40px">💍</div>
-  <h1>Chamunda<br>Marriage Beuro</h1>
-  <p>લગ્ન માટે યોગ્ય જીવનસાથીની શોધમાં સહાય</p>
-</header>
-
-<main>
-<section class="card">
-  <h2>અમારી સેવા</h2>
-  <p>લગ્ન માટે યોગ્ય બાયોડેટા શોધવામાં મદદ. વધુ માહિતી માટે પહેલાં રજિસ્ટ્રેશન કરો.</p>
-  <div class="tiles">
-    <div class="tile">💍 લગ્ન બાયોડેટા</div>
-    <div class="tile">🔎 પ્રોફાઇલ શોધ</div>
-    <div class="tile">🧾 રજિસ્ટ્રેશન</div>
-    <div class="tile">🔐 સુરક્ષિત પ્રક્રિયા</div>
-  </div>
-</section>
-
-<!-- સાચો બાયોડેટા -->
-<section class="card">
-  <h2>રીવા જોષીનો બાયોડેટા</h2>
-  <article class="profile">
-    <img src="reva-joshi.png"
-         alt="રીવા જોષીનો બાયોડેટા ફોટો"
-         style="height:auto;max-height:460px;object-fit:contain">
-    <span class="tag">બાયોડેટા ID: CMB-501</span>
-    <h3>રીવા જોષી</h3>
-    <dl>
-      <dt>ઉંમર</dt><dd>25 વર્ષ</dd>
-      <dt>ઊંચાઈ</dt><dd>5 ફૂટ 4 ઇંચ</dd>
-      <dt>અભ્યાસ</dt><dd>M.Com</dd>
-      <dt>વ્યવસાય</dt><dd>બેંકમાં ક્લાર્ક</dd>
-      <dt>શહેર</dt><dd>આણંદ, ગુજરાત</dd>
-      <dt>સ્થિતિ</dt><dd>અપરિણીત</dd>
-      <dt>પરિવાર</dt><dd>સંસ્કારી મધ્યમવર્ગીય પરિવાર</dd>
-    </dl>
-    <p class="muted">વધુ વ્યક્તિગત માહિતી માટે સંમતિ અને રજિસ્ટ્રેશનની શરતો લાગુ પડે છે.</p>
-  </article>
-</section>
-
-<!-- બાયોડેટા શોધ -->
-<section class="card" id="biodata">
-  <h2>અન્ય બાયોડેટા</h2>
-  <div class="notice">
-    આ વિભાગમાં આપમેળે બનાવેલી 500 ડેમો પ્રોફાઇલ છે. તે વાસ્તવિક લગ્નના ઉમેદવારો નથી. વાસ્તવિક બાયોડેટા વ્યક્તિની પરવાનગીથી જ ઉમેરો.
-  </div>
-  <input id="search" placeholder="નામ, ID, શહેર અથવા અભ્યાસ શોધો">
-  <select id="city">
-    <option value="">બધાં શહેરો</option>
-  </select>
-  <select id="gender">
-    <option value="">બધા પ્રોફાઇલ</option>
-    <option value="મહિલા">મહિલા</option>
-    <option value="પુરુષ">પુરુષ</option>
-  </select>
-  <p class="count" id="count"></p>
-  <div class="grid" id="profiles"></div>
-</section>
-
-<section class="card">
-  <h2>પગલું 1: રજિસ્ટ્રેશન કરો</h2>
-  <p>તમારી સાચી અને સંપૂર્ણ માહિતી ભરીને ફોર્મ સબમિટ કરો.</p>
-  <a class="btn" href="https://forms.gle/7gsYUcPXXaidVuYV7" target="_blank" rel="noopener">
-    રજિસ્ટ્રેશન ફોર્મ ખોલો
-  </a>
-</section>
-
-<section class="card">
-  <h2>પગલું 2: ₹999 પેમેન્ટ</h2>
-  <p>ચુકવણી પહેલાં પ્રાપ્તકર્તાનું નામ અને QR વિગતો ચકાસો.</p>
-  <p><b>UPI ID:</b> prakashchauhan7188-3@oksbi</p>
-  <button class="btn" id="copy">UPI ID કોપી કરો</button>
-</section>
-
-<section class="card">
-  <h2>પગલું 3: UTR નંબર સબમિટ કરો</h2>
-  <a class="btn" href="https://forms.gle/RJc8Wtty7HJyaymU9" target="_blank" rel="noopener">
-    UTR ફોર્મ ખોલો
-  </a>
-  <p class="muted">પેમેન્ટની તપાસ પછી સભ્યપદની પુષ્ટિ થશે.</p>
-</section>
-
-<section class="card">
-  <h2>નિયમો અને શરતો</h2>
-  <ol>
-    <li>રજિસ્ટ્રેશન પહેલાં નિયમો વાંચો.</li>
-    <li>ફી ₹999 અને સભ્યપદ 1 વર્ષ માટે છે.</li>
-    <li>સાચી માહિતી આપો.</li>
-    <li>યોગ્ય પ્રોફાઇલ અથવા લગ્નની ખાતરી નથી.</li>
-    <li>ચુકવણી પહેલાં લાગુ પડતી રિફંડ નીતિ વાંચો.</li>
-  </ol>
-</section>
-</main>
-
-<footer>
-  <b>Chamunda Marriage Beuro</b>
-  <p>સાચી માહિતી આપો • નિયમો વાંચો • સુરક્ષિત રીતે આગળ વધો</p>
-</footer>
+<h1>લગ્ન બાયોડેટા</h1>
+<div class="grid" id="profiles"></div>
 
 <script>
-const firstF=[
-"દિવ્યા","કાજલ","હેતલ","પૂજા","નિધિ","રિદ્ધિ","જલ્પા","મિતાલી",
-"આરતી","ભૂમિ","કૃપા","ફાલ્ગુની","નીતા","શ્રદ્ધા","મેઘા","ધારા",
-"સોનલ","પાયલ","આશા","નૈના"
+const biodata=[
+ {name:"નેના ભોરા",age:"23 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.Sc.",job:"લેબ ટેક્નિશિયન",city:"વડોદરા, ગુજરાત",photo:"biodata1.jpg"},
+ {name:"નિશા દેસાઈ",age:"24 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A.",job:"ખાનગી ઓફિસમાં નોકરી",city:"વડોદરા",photo:"biodata2.jpg"},
+ {name:"કાવ્યા સોલંકી",age:"22 વર્ષ",height:"5 ફૂટ 1 ઇંચ",education:"ધોરણ 10 પાસ",job:"બ્યુટી પાર્લરમાં સહાયક",city:"જામનગર",photo:"biodata3.jpg"},
+ {name:"પ્રિયા દાસ",age:"25 વર્ષ",height:"5 ફૂટ 1 ઇંચ",education:"B.Com.",job:"ટી-અસિસ્ટન્ટ",city:"દ્વારકા",photo:"biodata4.jpg"},
+ {name:"હેતલ રાઠોડ",age:"23 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A.",job:"ખાનગી ઓફિસમાં નોકરી",city:"રાજકોટ",photo:"biodata5.jpg"},
+ {name:"કાવ્યા પટેલ",age:"24 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.Com.",job:"પ્રાઇવેટ કંપનીમાં નોકરી",city:"અમદાવાદ",photo:"biodata6.jpg"},
+ {name:"નંદિની ચૌહાણ",age:"25 વર્ષ",height:"5 ફૂટ 2 ઇંચ",education:"B.A.",job:"પ્રાઇવેટ નોકરી",city:"વડોદરા",photo:"biodata7.jpg"},
+ {name:"કાવ્યા રાઠોડ",age:"21 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"B.A. (ચાલુ)",job:"અભ્યાસ સાથે પાર્ટ-ટાઇમ",city:"રાજકોટ",photo:"biodata8.jpg"},
+ {name:"રીયા પટેલ",age:"22 વર્ષ",height:"5 ફૂટ 4 ઇંચ",education:"B.Com.",job:"પ્રાઇવેટ નોકરી",city:"રાજકોટ",photo:"biodata9.jpg"},
+ {name:"રીમા પટેલ",age:"23 વર્ષ",height:"5 ફૂટ 3 ઇંચ",education:"ધોરણ 12 પાસ",job:"ખાનગી નોકરી",city:"અમદાવાદ",photo:"biodata10.jpg"}
 ];
 
-const firstM=[
-"રાહુલ","હાર્દિક","જયદીપ","મયંક","કિશન","વિપુલ","પ્રતિક","મિતેશ",
-"દિનેશ","નિલેશ","ધ્રુવ","અંકિત","વિશાલ","પાર્થ","યશ","કેતન",
-"ચિરાગ","સંજય","મનોજ","અક્ષય"
-];
-
-const surnames=[
-"મોદી","પટેલ","શાહ","જાડેજા","ચૌહાણ","સોલંકી","ત્રિવેદી",
-"વાઘેલા","રાઠોડ","દવે","જોષી","પરમાર","ગોહિલ","મકવાણા",
-"ઠક્કર","ભટ્ટ","પંડ્યા","મહેતા","રાવલ","ચાવડા"
-];
-
-const cities=[
-"પાટણ","અંજાર","ભુજ","ગાંધીધામ","રાજકોટ","અમદાવાદ","મોરબી",
-"જામનગર","વડોદરા","સુરત","જૂનાગઢ","પાલનપુર","મહેસાણા",
-"આણંદ","નડિયાદ","ભાવનગર","વેરાવળ","દીસા","કચ્છ","અમરેલી"
-];
-
-const edu=[
-"ધોરણ 10 પાસ","ધોરણ 12 પાસ","B.A.","B.Com.","B.Sc.","B.Ed.",
-"ધોરણ 7 પાસ","ડિપ્લોમા","B.C.A.","M.A.","ITI","ગ્રેજ્યુએટ"
-];
-
-const jobsF=[
-"ગૃહિણી","શિક્ષિકા","ખાનગી નોકરી","સિલાઈ કામ",
-"બ્યુટી પાર્લર","ઓફિસ સહાયક","વિદ્યાર્થી","બિઝનેસ"
-];
-
-const jobsM=[
-"ખાનગી નોકરી","બિઝનેસ","સરકારી નોકરી","ખેડૂત",
-"ડ્રાઇવર","ઇલેક્ટ્રિશિયન","કમ્પ્યુટર ઓપરેટર","શિક્ષક"
-];
-
-const hf=[
-"4 ફૂટ 11 ઇંચ","5 ફૂટ 0 ઇંચ","5 ફૂટ 1 ઇંચ","5 ફૂટ 2 ઇંચ",
-"5 ફૂટ 3 ઇંચ","5 ફૂટ 4 ઇંચ","5 ફૂટ 5 ઇંચ","5 ફૂટ 6 ઇંચ"
-];
-
-const hm=[
-"5 ફૂટ 4 ઇંચ","5 ફૂટ 5 ઇંચ","5 ફૂટ 6 ઇંચ","5 ફૂટ 7 ઇંચ",
-"5 ફૂટ 8 ઇંચ","5 ફૂટ 9 ઇંચ","5 ફૂટ 10 ઇંચ","6 ફૂટ"
-];
-
-const data=Array.from({length:500},(_,n)=>{
-  let i=n+1;
-  let f=i%2===1;
-  let names=f?firstF:firstM;
-  let jobs=f?jobsF:jobsM;
-
-  return {
-    id:"DEMO-"+String(i).padStart(3,"0"),
-    name:names[(i*7)%names.length]+" "+surnames[(i*11)%surnames.length],
-    gender:f?"મહિલા":"પુરુષ",
-    age:21+(i*13%17),
-    height:(f?hf:hm)[i%8],
-    education:edu[(i*7)%edu.length],
-    job:jobs[(i*5)%jobs.length],
-    city:cities[(i*9)%cities.length],
-    hue:(i*47)%360,
-    skin:["#e7b98d","#c98e68","#f0c9a4","#a96f4e"][i%4],
-    hair:["#35231f","#201b20","#4b3026","#171717"][i%4]
-  };
-});
-
-function avatar(p){
-  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
-  <rect width="180" height="180" rx="16" fill="hsl(${p.hue},48%,88%)"/>
-  <path d="M47 180 Q48 123 90 121 Q133 124 134 180"
-        fill="hsl(${(p.hue+35)%360},45%,42%)"/>
-  <circle cx="90" cy="74" r="43" fill="${p.skin}"/>
-  <path d="M48 78 Q42 25 90 25 Q138 25 132 78 L119 53 Q88 39 59 55Z"
-        fill="${p.hair}"/>
-  <circle cx="74" cy="75" r="3" fill="#35232a"/>
-  <circle cx="106" cy="75" r="3" fill="#35232a"/>
-  <path d="M78 94 Q90 101 102 94" stroke="#754a3b" stroke-width="3" fill="none"/>
-  <text x="90" y="165" font-size="10" text-anchor="middle" fill="white">DEMO</text>
-  </svg>`;
-  return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
-}
-
-const cityBox=document.getElementById("city");
-
-[...new Set(data.map(p=>p.city))].sort().forEach(c=>{
-  let o=document.createElement("option");
-  o.value=c;
-  o.textContent=c;
-  cityBox.appendChild(o);
-});
-
-function render(){
-  let q=document.getElementById("search").value.toLowerCase().trim();
-  let c=cityBox.value;
-  let g=document.getElementById("gender").value;
-
-  let found=data.filter(p=>
-    (!c||p.city===c)&&
-    (!g||p.gender===g)&&
-    [p.id,p.name,p.city,p.education,p.job].some(v=>v.toLowerCase().includes(q))
-  );
-
-  document.getElementById("count").textContent=
-    found.length+" / 500 ડેમો પ્રોફાઇલ";
-
-  document.getElementById("profiles").innerHTML=found.map(p=>`
-    <article class="profile">
-      <img alt="ચિત્રાત્મક ડેમો અવતાર" src="${avatar(p)}">
-      <span class="tag">${p.id}</span>
-      <h3>${p.name}</h3>
-      <dl>
-        <dt>લિંગ</dt><dd>${p.gender}</dd>
-        <dt>ઉંમર</dt><dd>${p.age} વર્ષ</dd>
-        <dt>ઊંચાઈ</dt><dd>${p.height}</dd>
-        <dt>અભ્યાસ</dt><dd>${p.education}</dd>
-        <dt>વ્યવસાય</dt><dd>${p.job}</dd>
-        <dt>શહેર</dt><dd>${p.city}, ગુજરાત</dd>
-      </dl>
-      <p class="muted">કાલ્પનિક ડેમો પ્રોફાઇલ</p>
-    </article>
-  `).join("");
-}
-
-document.getElementById("search").addEventListener("input",render);
-cityBox.addEventListener("change",render);
-document.getElementById("gender").addEventListener("change",render);
-render();
-
-document.getElementById("copy").addEventListener("click",async()=>{
-  const upi="prakashchauhan7188-3@oksbi";
-  try{
-    await navigator.clipboard.writeText(upi);
-    alert("UPI ID કોપી થયું");
-  }catch(e){
-    prompt("UPI ID કોપી કરો",upi);
-  }
-});
+document.getElementById("profiles").innerHTML=biodata.map((p,i)=>`
+ <article class="card">
+   <img src="${p.photo}" alt="${p.name}નો બાયોડેટા"
+        onerror="this.style.display='none'">
+   <h2>${p.name}</h2>
+   <p><b>બાયોડેટા ID:</b> CMB-${String(i+1).padStart(3,"0")}</p>
+   <p><b>ઉંમર:</b> ${p.age}</p>
+   <p><b>ઊંચાઈ:</b> ${p.height}</p>
+   <p><b>શિક્ષણ:</b> ${p.education}</p>
+   <p><b>નોકરી / વ્યવસાય:</b> ${p.job}</p>
+   <p><b>શહેર:</b> ${p.city}</p>
+ </article>
+`).join("");
 </script>
 </body>
 </html>
